@@ -22,6 +22,8 @@
 		BE9DE6221EA537B3004E05CE /* NLIfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6211EA537B3004E05CE /* NLIfile.swift */; };
 		BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6231EA53917004E05CE /* Credentials .swift */; };
 		BE9DE6261EA554F0004E05CE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6251EA554F0004E05CE /* Note.swift */; };
+		BE9DE62A1EA6647E004E05CE /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6291EA6647E004E05CE /* NoteViewController.swift */; };
+		BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		BE9DE6211EA537B3004E05CE /* NLIfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLIfile.swift; sourceTree = "<group>"; };
 		BE9DE6231EA53917004E05CE /* Credentials .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credentials .swift"; sourceTree = "<group>"; };
 		BE9DE6251EA554F0004E05CE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		BE9DE6291EA6647E004E05CE /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPallet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +152,9 @@
 				BE9DE5EE1EA53311004E05CE /* LaunchScreen.storyboard */,
 				BE9DE5F11EA53311004E05CE /* Info.plist */,
 				BE9DE5E91EA53311004E05CE /* EmoteNote.xcdatamodeld */,
-				BE9DE6211EA537B3004E05CE /* NLIfile.swift */,
-				BE9DE6231EA53917004E05CE /* Credentials .swift */,
-				BE9DE6251EA554F0004E05CE /* Note.swift */,
+				BE9DE62F1EA688D2004E05CE /* Classes */,
+				BE9DE62D1EA68769004E05CE /* Controllers */,
+				BE9DE62E1EA6879D004E05CE /* Utilities */,
 			);
 			path = EmoteNote;
 			sourceTree = "<group>";
@@ -179,6 +183,32 @@
 				BE9DE6141EA5345E004E05CE /* NaturalLanguageUnderstandingV1.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE9DE62D1EA68769004E05CE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE9DE6291EA6647E004E05CE /* NoteViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BE9DE62E1EA6879D004E05CE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */,
+				BE9DE6211EA537B3004E05CE /* NLIfile.swift */,
+				BE9DE6231EA53917004E05CE /* Credentials .swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		BE9DE62F1EA688D2004E05CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE9DE6251EA554F0004E05CE /* Note.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,10 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9DE62A1EA6647E004E05CE /* NoteViewController.swift in Sources */,
 				BE9DE5E51EA53311004E05CE /* ViewController.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
 				BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */,
+				BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */,
 				BE9DE6221EA537B3004E05CE /* NLIfile.swift in Sources */,
 				BE9DE6261EA554F0004E05CE /* Note.swift in Sources */,
 			);
