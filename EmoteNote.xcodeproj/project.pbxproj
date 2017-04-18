@@ -15,6 +15,13 @@
 		BE9DE5F01EA53311004E05CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9DE5EE1EA53311004E05CE /* LaunchScreen.storyboard */; };
 		BE9DE5FB1EA53312004E05CE /* EmoteNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5FA1EA53312004E05CE /* EmoteNoteTests.swift */; };
 		BE9DE6061EA53312004E05CE /* EmoteNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6051EA53312004E05CE /* EmoteNoteUITests.swift */; };
+		BE9DE61B1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */; };
+		BE9DE61C1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE9DE61F1EA53780004E05CE /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DE61E1EA53780004E05CE /* RestKit.framework */; };
+		BE9DE6201EA53780004E05CE /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DE61E1EA53780004E05CE /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE9DE6221EA537B3004E05CE /* NLIfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6211EA537B3004E05CE /* NLIfile.swift */; };
+		BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6231EA53917004E05CE /* Credentials .swift */; };
+		BE9DE6261EA554F0004E05CE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6251EA554F0004E05CE /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BE9DE6161EA5352A004E05CE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE9DE61D1EA5362F004E05CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE9DE61C1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Embed Frameworks */,
+				BE9DE6201EA53780004E05CE /* RestKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BE9DE5DF1EA53311004E05CE /* EmoteNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoteNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9DE5E21EA53311004E05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +80,12 @@
 		BE9DE6011EA53312004E05CE /* EmoteNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmoteNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9DE6051EA53312004E05CE /* EmoteNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoteNoteUITests.swift; sourceTree = "<group>"; };
 		BE9DE6071EA53312004E05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE9DE6141EA5345E004E05CE /* NaturalLanguageUnderstandingV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaturalLanguageUnderstandingV1.framework; path = Carthage/Build/iOS/NaturalLanguageUnderstandingV1.framework; sourceTree = "<group>"; };
+		BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaturalLanguageUnderstandingV1.framework; path = Carthage/Build/iOS/NaturalLanguageUnderstandingV1.framework; sourceTree = "<group>"; };
+		BE9DE61E1EA53780004E05CE /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
+		BE9DE6211EA537B3004E05CE /* NLIfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLIfile.swift; sourceTree = "<group>"; };
+		BE9DE6231EA53917004E05CE /* Credentials .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credentials .swift"; sourceTree = "<group>"; };
+		BE9DE6251EA554F0004E05CE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9DE61B1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Frameworks */,
+				BE9DE61F1EA53780004E05CE /* RestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +118,13 @@
 		BE9DE5D61EA53311004E05CE = {
 			isa = PBXGroup;
 			children = (
+				BE9DE61E1EA53780004E05CE /* RestKit.framework */,
+				BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */,
 				BE9DE5E11EA53311004E05CE /* EmoteNote */,
 				BE9DE5F91EA53312004E05CE /* EmoteNoteTests */,
 				BE9DE6041EA53312004E05CE /* EmoteNoteUITests */,
 				BE9DE5E01EA53311004E05CE /* Products */,
+				BE9DE6131EA5345E004E05CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +148,9 @@
 				BE9DE5EE1EA53311004E05CE /* LaunchScreen.storyboard */,
 				BE9DE5F11EA53311004E05CE /* Info.plist */,
 				BE9DE5E91EA53311004E05CE /* EmoteNote.xcdatamodeld */,
+				BE9DE6211EA537B3004E05CE /* NLIfile.swift */,
+				BE9DE6231EA53917004E05CE /* Credentials .swift */,
+				BE9DE6251EA554F0004E05CE /* Note.swift */,
 			);
 			path = EmoteNote;
 			sourceTree = "<group>";
@@ -128,6 +173,14 @@
 			path = EmoteNoteUITests;
 			sourceTree = "<group>";
 		};
+		BE9DE6131EA5345E004E05CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE9DE6141EA5345E004E05CE /* NaturalLanguageUnderstandingV1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +191,8 @@
 				BE9DE5DB1EA53311004E05CE /* Sources */,
 				BE9DE5DC1EA53311004E05CE /* Frameworks */,
 				BE9DE5DD1EA53311004E05CE /* Resources */,
+				BE9DE6161EA5352A004E05CE /* CopyFiles */,
+				BE9DE61D1EA5362F004E05CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +320,9 @@
 				BE9DE5E51EA53311004E05CE /* ViewController.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
+				BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */,
+				BE9DE6221EA537B3004E05CE /* NLIfile.swift in Sources */,
+				BE9DE6261EA554F0004E05CE /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +474,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EmoteNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rasmussen.EmoteNote;
@@ -428,6 +490,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EmoteNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rasmussen.EmoteNote;
@@ -509,6 +575,7 @@
 				BE9DE60C1EA53312004E05CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE9DE60D1EA53312004E05CE /* Build configuration list for PBXNativeTarget "EmoteNoteTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +584,7 @@
 				BE9DE60F1EA53312004E05CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE9DE6101EA53312004E05CE /* Build configuration list for PBXNativeTarget "EmoteNoteUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +593,7 @@
 				BE9DE6121EA53312004E05CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

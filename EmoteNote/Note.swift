@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class Note {
+    
+    var entryDate : Date
+    
+    
+    
+    init(entryDate : Date) {
+        self.entryDate = entryDate
+    }
+    
+}
