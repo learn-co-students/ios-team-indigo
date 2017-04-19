@@ -43,7 +43,6 @@ class NoteVC: UIViewController, UITextViewDelegate {
         self.noteView.layer.cornerRadius = 5
         
         let content = self.noteView.text
-        
         if (content?.isEmpty)! {
             self.noteView.text = "please type how you are feeling here."
             self.noteView.textColor = UIColor.gray

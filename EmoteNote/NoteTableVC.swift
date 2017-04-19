@@ -53,8 +53,11 @@ class NoteTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         let note = store.notes[indexPath.row]
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
         if let strDate = note.date {
-        cell.textLabel?.text = String(describing: strDate)
+            let result = dateFormatter.string(from: strDate as Date)
+            cell.textLabel?.text = String(describing: result)
         }
         
         return cell
