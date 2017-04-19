@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */; };
 		BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E21EA53311004E05CE /* AppDelegate.swift */; };
 		BE9DE5E51EA53311004E05CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E41EA53311004E05CE /* ViewController.swift */; };
 		BE9DE5E81EA53311004E05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9DE5E61EA53311004E05CE /* Main.storyboard */; };
@@ -19,11 +20,12 @@
 		BE9DE61C1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE9DE61F1EA53780004E05CE /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DE61E1EA53780004E05CE /* RestKit.framework */; };
 		BE9DE6201EA53780004E05CE /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DE61E1EA53780004E05CE /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE9DE6221EA537B3004E05CE /* NLIfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6211EA537B3004E05CE /* NLIfile.swift */; };
+		BE9DE6221EA537B3004E05CE /* EmotionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6211EA537B3004E05CE /* EmotionApi.swift */; };
 		BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6231EA53917004E05CE /* Credentials .swift */; };
-		BE9DE6261EA554F0004E05CE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6251EA554F0004E05CE /* Note.swift */; };
-		BE9DE62A1EA6647E004E05CE /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6291EA6647E004E05CE /* NoteViewController.swift */; };
+		BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6291EA6647E004E05CE /* NoteVC.swift */; };
 		BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */; };
+		BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */; };
+		BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7F3521EA7D7F300221251 /* NoteDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVC.swift; sourceTree = "<group>"; };
 		BE9DE5DF1EA53311004E05CE /* EmoteNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoteNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9DE5E21EA53311004E05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9DE5E41EA53311004E05CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,11 +88,12 @@
 		BE9DE6141EA5345E004E05CE /* NaturalLanguageUnderstandingV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaturalLanguageUnderstandingV1.framework; path = Carthage/Build/iOS/NaturalLanguageUnderstandingV1.framework; sourceTree = "<group>"; };
 		BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaturalLanguageUnderstandingV1.framework; path = Carthage/Build/iOS/NaturalLanguageUnderstandingV1.framework; sourceTree = "<group>"; };
 		BE9DE61E1EA53780004E05CE /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
-		BE9DE6211EA537B3004E05CE /* NLIfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLIfile.swift; sourceTree = "<group>"; };
+		BE9DE6211EA537B3004E05CE /* EmotionApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionApi.swift; sourceTree = "<group>"; };
 		BE9DE6231EA53917004E05CE /* Credentials .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credentials .swift"; sourceTree = "<group>"; };
-		BE9DE6251EA554F0004E05CE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		BE9DE6291EA6647E004E05CE /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		BE9DE6291EA6647E004E05CE /* NoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPallet.swift; sourceTree = "<group>"; };
+		BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
+		BED7F3521EA7D7F300221251 /* NoteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +192,9 @@
 		BE9DE62D1EA68769004E05CE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BE9DE6291EA6647E004E05CE /* NoteViewController.swift */,
+				BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */,
+				BE9DE6291EA6647E004E05CE /* NoteVC.swift */,
+				BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -197,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */,
-				BE9DE6211EA537B3004E05CE /* NLIfile.swift */,
 				BE9DE6231EA53917004E05CE /* Credentials .swift */,
 			);
 			name = Utilities;
@@ -206,7 +211,8 @@
 		BE9DE62F1EA688D2004E05CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BE9DE6251EA554F0004E05CE /* Note.swift */,
+				BED7F3521EA7D7F300221251 /* NoteDataStore.swift */,
+				BE9DE6211EA537B3004E05CE /* EmotionApi.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -347,14 +353,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9DE62A1EA6647E004E05CE /* NoteViewController.swift in Sources */,
+				BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */,
+				BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */,
 				BE9DE5E51EA53311004E05CE /* ViewController.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
 				BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */,
 				BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */,
-				BE9DE6221EA537B3004E05CE /* NLIfile.swift in Sources */,
-				BE9DE6261EA554F0004E05CE /* Note.swift in Sources */,
+				BE9DE6221EA537B3004E05CE /* EmotionApi.swift in Sources */,
+				BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */,
+				BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
