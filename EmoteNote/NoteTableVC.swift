@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class NoteTableVC: UITableViewController {
     
     let store = NoteDataStore.sharedInstance
@@ -16,8 +17,6 @@ class NoteTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -50,15 +49,23 @@ class NoteTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! NoteTableViewCell
         let note = store.notes[indexPath.row]
         
+        print(note.sadness)
+        
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.dateFormat = "dd.MM.yyyy" // "dd MM yyyy"
         if let strDate = note.date {
             let result = dateFormatter.string(from: strDate as Date)
-            cell.textLabel?.text = String(describing: result)
+            cell.dateLabel?.text = String(describing: result)
         }
+        
+        cell.angerLabel?.text = String(note.anger)
+        cell.sadnessLabel?.text = String(note.sadness)
+        cell.joyLabel?.text = String(note.joy)
+        cell.fearLabel?.text = String(note.fear)
+        cell.disgustLabel?.text = String(note.disgust)
         
         return cell
     }

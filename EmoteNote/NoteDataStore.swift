@@ -40,7 +40,7 @@ final class NoteDataStore {
         }
     }
     
-    func saveNote(text: String){
+    func saveNote(text: String, completion: @escaping (Void) -> Void){
         
         // pop up if empty
         // let contextDelegate = (UIApplication.shared.delegate as! AppDelegate)
@@ -62,18 +62,19 @@ final class NoteDataStore {
                 note.fear = scores.fear!
                 note.disgust = scores.disgust!
             }
+            
+            note.date = Date() as NSDate
+            if let date = note.date {
+                print(date)
+            }
+            if let content = note.content {
+                print(content)
+            }
+            self.saveContext()
+            print("saving a note")
+            completion()
         }
-        
-        note.date = Date() as NSDate
-        if let date = note.date {
-            print(date)
-        }
-        if let content = note.content {
-            print(content)
-        }
-        self.saveContext()
-        print("saving a note")
-        
+
     }
     
     func getNotes() {

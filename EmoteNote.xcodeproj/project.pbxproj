@@ -25,6 +25,7 @@
 		BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6291EA6647E004E05CE /* NoteVC.swift */; };
 		BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */; };
 		BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */; };
+		BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */; };
 		BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7F3521EA7D7F300221251 /* NoteDataStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		BE9DE6291EA6647E004E05CE /* NoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPallet.swift; sourceTree = "<group>"; };
 		BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
+		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
 		BED7F3521EA7D7F300221251 /* NoteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				BE9DE5E91EA53311004E05CE /* EmoteNote.xcdatamodeld */,
 				BE9DE62F1EA688D2004E05CE /* Classes */,
 				BE9DE62D1EA68769004E05CE /* Controllers */,
+				BEB3E06F1EA91960008345FE /* Styling */,
 				BE9DE62E1EA6879D004E05CE /* Utilities */,
 			);
 			path = EmoteNote;
@@ -192,6 +195,7 @@
 		BE9DE62D1EA68769004E05CE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */,
 				BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */,
 				BE9DE6291EA6647E004E05CE /* NoteVC.swift */,
 				BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */,
@@ -202,7 +206,6 @@
 		BE9DE62E1EA6879D004E05CE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */,
 				BE9DE6231EA53917004E05CE /* Credentials .swift */,
 			);
 			name = Utilities;
@@ -215,6 +218,14 @@
 				BE9DE6211EA537B3004E05CE /* EmotionApi.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		BEB3E06F1EA91960008345FE /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */,
+			);
+			name = Styling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 				BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */,
 				BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */,
 				BE9DE6221EA537B3004E05CE /* EmotionApi.swift in Sources */,
+				BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */,
 				BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */,
 				BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */,
 			);

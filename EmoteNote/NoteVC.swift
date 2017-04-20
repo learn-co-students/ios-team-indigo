@@ -14,13 +14,11 @@ class NoteVC: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var noteView: UITextView!
     
-    @IBAction func dismissButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-        print("dismissed note view")
-    }
     
     @IBAction func saveNoteButton(_ sender: UIButton) {
-        store.saveNote(text: noteView.text)
+        store.saveNote(text: noteView.text) { (view) in
+            self.dismissNoteVC()
+        }
     }
     
     override func viewDidLoad() {
@@ -59,6 +57,9 @@ class NoteVC: UIViewController, UITextViewDelegate {
         self.view.backgroundColor = UIColor(red: 147/225, green: 234/225, blue: 225/225, alpha: 1)
     }
     
-    
+    func dismissNoteVC() {
+        self.dismiss(animated: true, completion: nil)
+        print("dismissed note view")
+    }
     
 }
