@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4482241EAA5A9800126402 /* NoteContentVC.swift */; };
 		BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */; };
 		BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E21EA53311004E05CE /* AppDelegate.swift */; };
 		BE9DE5E81EA53311004E05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9DE5E61EA53311004E05CE /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE4482241EAA5A9800126402 /* NoteContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteContentVC.swift; sourceTree = "<group>"; };
 		BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVC.swift; sourceTree = "<group>"; };
 		BE9DE5DF1EA53311004E05CE /* EmoteNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoteNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9DE5E21EA53311004E05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */,
 				BE9DE6291EA6647E004E05CE /* NoteVC.swift */,
 				BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */,
+				BE4482241EAA5A9800126402 /* NoteContentVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
+				BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */,
 				BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */,
 				BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */,
 				BE9DE6221EA537B3004E05CE /* EmotionApi.swift in Sources */,

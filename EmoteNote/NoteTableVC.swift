@@ -14,6 +14,7 @@ class NoteTableVC: UITableViewController {
     let store = NoteDataStore.sharedInstance
     
     var reuseIdentifier : String = "noteIdentifier"
+    let segueIdentifier : String = "noteShowSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,15 +56,24 @@ class NoteTableVC: UITableViewController {
             cell.dateLabel?.text = String(describing: result)
         }
         
-        cell.setBackgroundColors()
+        // cell.setBackgroundColors()
         
-        cell.angerLabel?.text = String(note.anger)
-        cell.sadnessLabel?.text = String(note.sadness)
-        cell.joyLabel?.text = String(note.joy)
-        cell.fearLabel?.text = String(note.fear)
-        cell.disgustLabel?.text = String(note.disgust)
+//        cell.angerLabel?.text = String(note.anger)
+//        cell.sadnessLabel?.text = String(note.sadness)
+//        cell.joyLabel?.text = String(note.joy)
+//        cell.fearLabel?.text = String(note.fear)
+//        cell.disgustLabel?.text = String(note.disgust)
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != segueIdentifier { return }
+        if let dest = segue.destination as? NoteContentVC,
+            let indexPath = tableView.indexPathForSelectedRow {
+            dest.selectedNote = store.notes[(indexPath as NSIndexPath).row]
+        }
+    }
+   
 
 }

@@ -12,11 +12,15 @@ import UIKit
 class NoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var angerLabel: UILabel!
-    @IBOutlet weak var sadnessLabel: UILabel!
-    @IBOutlet weak var joyLabel: UILabel!
-    @IBOutlet weak var fearLabel: UILabel!
-    @IBOutlet weak var disgustLabel: UILabel!
+    @IBOutlet weak var contentLabel: NoteTableViewCell!
+    
+    
+    
+//    @IBOutlet weak var angerLabel: UILabel!
+//    @IBOutlet weak var sadnessLabel: UILabel!
+//    @IBOutlet weak var joyLabel: UILabel!
+//    @IBOutlet weak var fearLabel: UILabel!
+//    @IBOutlet weak var disgustLabel: UILabel!
 
 //    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 //        super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,12 +35,12 @@ class NoteTableViewCell: UITableViewCell {
 //    }
     
     
-    func setBackgroundColors() {
-        self.angerLabel.backgroundColor = ColorPallet.angerColor
-        self.sadnessLabel.backgroundColor = ColorPallet.sadnessColor
-        self.joyLabel.backgroundColor = ColorPallet.joyColor
-        self.fearLabel.backgroundColor = ColorPallet.fearColor
-        self.disgustLabel.backgroundColor = ColorPallet.disgustColor
-    }
+//    func setBackgroundColors() {
+//        self.angerLabel.backgroundColor = ColorPallet.angerColor
+//        self.sadnessLabel.backgroundColor = ColorPallet.sadnessColor
+//        self.joyLabel.backgroundColor = ColorPallet.joyColor
+//        self.fearLabel.backgroundColor = ColorPallet.fearColor
+//        self.disgustLabel.backgroundColor = ColorPallet.disgustColor
+//    }
 
 }
