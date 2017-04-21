@@ -24,6 +24,14 @@
 		BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6231EA53917004E05CE /* Credentials .swift */; };
 		BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE6291EA6647E004E05CE /* NoteVC.swift */; };
 		BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */; };
+		BEA3675F1EAA66160077D080 /* Cabin-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA367571EAA66160077D080 /* Cabin-Bold.otf */; };
+		BEA367601EAA66160077D080 /* Cabin-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA367581EAA66160077D080 /* Cabin-BoldItalic.otf */; };
+		BEA367611EAA66160077D080 /* Cabin-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA367591EAA66160077D080 /* Cabin-Italic.otf */; };
+		BEA367621EAA66160077D080 /* Cabin-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675A1EAA66160077D080 /* Cabin-Medium.otf */; };
+		BEA367631EAA66160077D080 /* Cabin-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675B1EAA66160077D080 /* Cabin-MediumItalic.otf */; };
+		BEA367641EAA66160077D080 /* Cabin-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675C1EAA66160077D080 /* Cabin-Regular.otf */; };
+		BEA367651EAA66160077D080 /* Cabin-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675D1EAA66160077D080 /* Cabin-SemiBold.otf */; };
+		BEA367661EAA66160077D080 /* Cabin-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */; };
 		BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */; };
 		BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */; };
 		BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E0701EA945DC008345FE /* DoubleConverter.swift */; };
@@ -94,6 +102,14 @@
 		BE9DE6231EA53917004E05CE /* Credentials .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credentials .swift"; sourceTree = "<group>"; };
 		BE9DE6291EA6647E004E05CE /* NoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPallet.swift; sourceTree = "<group>"; };
+		BEA367571EAA66160077D080 /* Cabin-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Bold.otf"; sourceTree = "<group>"; };
+		BEA367581EAA66160077D080 /* Cabin-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic.otf"; sourceTree = "<group>"; };
+		BEA367591EAA66160077D080 /* Cabin-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.otf"; sourceTree = "<group>"; };
+		BEA3675A1EAA66160077D080 /* Cabin-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium.otf"; sourceTree = "<group>"; };
+		BEA3675B1EAA66160077D080 /* Cabin-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic.otf"; sourceTree = "<group>"; };
+		BEA3675C1EAA66160077D080 /* Cabin-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.otf"; sourceTree = "<group>"; };
+		BEA3675D1EAA66160077D080 /* Cabin-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.otf"; sourceTree = "<group>"; };
+		BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
 		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
 		BEB3E0701EA945DC008345FE /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
@@ -132,6 +148,7 @@
 			children = (
 				BE9DE61E1EA53780004E05CE /* RestKit.framework */,
 				BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */,
+				BEA367671EAA661C0077D080 /* Resources */,
 				BE9DE5E11EA53311004E05CE /* EmoteNote */,
 				BE9DE5F91EA53312004E05CE /* EmoteNoteTests */,
 				BE9DE6041EA53312004E05CE /* EmoteNoteUITests */,
@@ -221,6 +238,21 @@
 				BE9DE6211EA537B3004E05CE /* EmotionApi.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		BEA367671EAA661C0077D080 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEA367571EAA66160077D080 /* Cabin-Bold.otf */,
+				BEA367581EAA66160077D080 /* Cabin-BoldItalic.otf */,
+				BEA367591EAA66160077D080 /* Cabin-Italic.otf */,
+				BEA3675A1EAA66160077D080 /* Cabin-Medium.otf */,
+				BEA3675B1EAA66160077D080 /* Cabin-MediumItalic.otf */,
+				BEA3675C1EAA66160077D080 /* Cabin-Regular.otf */,
+				BEA3675D1EAA66160077D080 /* Cabin-SemiBold.otf */,
+				BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BEB3E06F1EA91960008345FE /* Styling */ = {
@@ -340,9 +372,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA367601EAA66160077D080 /* Cabin-BoldItalic.otf in Resources */,
+				BEA3675F1EAA66160077D080 /* Cabin-Bold.otf in Resources */,
 				BE9DE5F01EA53311004E05CE /* LaunchScreen.storyboard in Resources */,
+				BEA367611EAA66160077D080 /* Cabin-Italic.otf in Resources */,
 				BE9DE5ED1EA53311004E05CE /* Assets.xcassets in Resources */,
+				BEA367641EAA66160077D080 /* Cabin-Regular.otf in Resources */,
+				BEA367661EAA66160077D080 /* Cabin-SemiBoldItalic.otf in Resources */,
+				BEA367651EAA66160077D080 /* Cabin-SemiBold.otf in Resources */,
 				BE9DE5E81EA53311004E05CE /* Main.storyboard in Resources */,
+				BEA367631EAA66160077D080 /* Cabin-MediumItalic.otf in Resources */,
+				BEA367621EAA66160077D080 /* Cabin-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
