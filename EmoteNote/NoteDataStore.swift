@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 final class NoteDataStore {
     static let sharedInstance = NoteDataStore()
@@ -47,7 +48,8 @@ final class NoteDataStore {
         let context = persistentContainer.viewContext
         let note = Note(context: context)
         
-        note.content = text
+        // note.content = text
+        
         EmotionAPI.getEmotionFor(bigText: text) { (result) in
             
             switch result {
@@ -56,13 +58,13 @@ final class NoteDataStore {
                 note.score = score
             case let .emotionScores(scores):
                 print(scores)
-                note.anger = scores.anger!
-                note.sadness = scores.sadness!
-                note.joy = scores.joy!
-                note.fear = scores.fear!
-                note.disgust = scores.disgust!
+                note.anger = DoubleConverter.willConvertDouble(as: scores.anger!)
+                note.sadness = DoubleConverter.willConvertDouble(as: scores.sadness!)
+                note.joy = DoubleConverter.willConvertDouble(as: scores.joy!)
+                note.fear = DoubleConverter.willConvertDouble(as: scores.fear!)
+                note.disgust = DoubleConverter.willConvertDouble(as: scores.disgust!)
             }
-            
+            note.content = text
             note.date = Date() as NSDate
             if let date = note.date {
                 print(date)
@@ -74,7 +76,6 @@ final class NoteDataStore {
             print("saving a note")
             completion()
         }
-
     }
     
     func getNotes() {

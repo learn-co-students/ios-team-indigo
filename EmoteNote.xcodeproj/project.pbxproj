@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */; };
 		BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E21EA53311004E05CE /* AppDelegate.swift */; };
-		BE9DE5E51EA53311004E05CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E41EA53311004E05CE /* ViewController.swift */; };
 		BE9DE5E81EA53311004E05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9DE5E61EA53311004E05CE /* Main.storyboard */; };
 		BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E91EA53311004E05CE /* EmoteNote.xcdatamodeld */; };
 		BE9DE5ED1EA53311004E05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9DE5EC1EA53311004E05CE /* Assets.xcassets */; };
@@ -26,6 +25,7 @@
 		BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */; };
 		BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */; };
 		BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */; };
+		BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E0701EA945DC008345FE /* DoubleConverter.swift */; };
 		BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7F3521EA7D7F300221251 /* NoteDataStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,6 @@
 		BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVC.swift; sourceTree = "<group>"; };
 		BE9DE5DF1EA53311004E05CE /* EmoteNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoteNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9DE5E21EA53311004E05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE9DE5E41EA53311004E05CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE9DE5E71EA53311004E05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE9DE5EA1EA53311004E05CE /* EmoteNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmoteNote.xcdatamodel; sourceTree = "<group>"; };
 		BE9DE5EC1EA53311004E05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPallet.swift; sourceTree = "<group>"; };
 		BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
 		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
+		BEB3E0701EA945DC008345FE /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
 		BED7F3521EA7D7F300221251 /* NoteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				BE9DE5E21EA53311004E05CE /* AppDelegate.swift */,
-				BE9DE5E41EA53311004E05CE /* ViewController.swift */,
 				BE9DE5E61EA53311004E05CE /* Main.storyboard */,
 				BE9DE5EC1EA53311004E05CE /* Assets.xcassets */,
 				BE9DE5EE1EA53311004E05CE /* LaunchScreen.storyboard */,
@@ -207,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9DE6231EA53917004E05CE /* Credentials .swift */,
+				BEB3E0701EA945DC008345FE /* DoubleConverter.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -366,7 +366,6 @@
 			files = (
 				BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */,
 				BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */,
-				BE9DE5E51EA53311004E05CE /* ViewController.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
 				BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */,
@@ -375,6 +374,7 @@
 				BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */,
 				BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */,
 				BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */,
+				BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

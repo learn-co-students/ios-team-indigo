@@ -17,16 +17,12 @@ class NoteTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // get data from core data
-        print("view will appearing")
         store.getNotes()
-        // reload tableview
         tableView.reloadData()
     }
     
@@ -52,14 +48,14 @@ class NoteTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! NoteTableViewCell
         let note = store.notes[indexPath.row]
         
-        print(note.sadness)
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy" // "dd MM yyyy"
         if let strDate = note.date {
             let result = dateFormatter.string(from: strDate as Date)
             cell.dateLabel?.text = String(describing: result)
         }
+        
+        cell.setBackgroundColors()
         
         cell.angerLabel?.text = String(note.anger)
         cell.sadnessLabel?.text = String(note.sadness)

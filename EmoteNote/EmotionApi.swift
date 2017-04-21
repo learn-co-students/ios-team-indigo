@@ -20,8 +20,6 @@ class EmotionAPI {
     class func getEmotionFor(bigText: String, completion: @escaping (Result) -> Void ) {
         emotionTest(textToAnalyze: bigText, completion: completion)
         sentimentTest(textToAnalyze: bigText, completion: completion)
-        
-       
     }
     
     class func emotionTest(textToAnalyze: String, completion: @escaping (Result) -> ()) {

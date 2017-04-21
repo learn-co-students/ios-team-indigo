@@ -12,6 +12,7 @@ class NoteVC: UIViewController, UITextViewDelegate {
     
     let store = NoteDataStore.sharedInstance
     
+    @IBOutlet weak var saveNoteButton: UIButton!
     @IBOutlet weak var noteView: UITextView!
     
     
@@ -25,9 +26,8 @@ class NoteVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         setBackgroundColor()
         setNoteConstraints()
-        
+        styleSaveButton()
         // Do any additional setup after loading the view.
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +42,7 @@ class NoteVC: UIViewController, UITextViewDelegate {
         
         let content = self.noteView.text
         if (content?.isEmpty)! {
-            self.noteView.text = "please type how you are feeling here."
+            self.noteView.text = "please type how you are feeling..."
             self.noteView.textColor = UIColor.gray
         }
     }
@@ -54,12 +54,19 @@ class NoteVC: UIViewController, UITextViewDelegate {
     }
     
     func setBackgroundColor() {
-        self.view.backgroundColor = UIColor(red: 147/225, green: 234/225, blue: 225/225, alpha: 1)
+        self.view.backgroundColor = ColorPallet.noteBackgroundColor
     }
     
     func dismissNoteVC() {
         self.dismiss(animated: true, completion: nil)
         print("dismissed note view")
+    }
+    
+    func styleSaveButton() {
+        self.saveNoteButton.backgroundColor = ColorPallet.saveButtonColor
+        self.saveNoteButton.layer.cornerRadius = 2.5
+        self.saveNoteButton.widthAnchor.constraint(equalTo: noteView.widthAnchor, multiplier: 0.95).isActive = true
+        self.saveNoteButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
 }
