@@ -1,0 +1,25 @@
+{
+  "commitish" : "v3.0.2",
+  "iOS" : [
+    {
+      "hash" : "eca5f5e7b7b426f92924f74a6fa73f0531ff622e5eedbcf8446d163eaf0de387",
+      "name" : "Charts"
+    }
+  ],
+  "xcodeVersion" : "Xcode 8.3\nBuild version 8E162",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "hash" : "8a64d586344daa20a1fe5aad28a3ca9535667d2a406a0f0fc2b35e34be301584",
+      "name" : "Charts"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "35bb17295e38cb3148895f58d00c0311b8d524268e4e06941e70cc6dfa4c99d9",
+      "name" : "Charts"
+    }
+  ]
+}

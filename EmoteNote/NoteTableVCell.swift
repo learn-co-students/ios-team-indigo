@@ -12,7 +12,8 @@ import UIKit
 class NoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var contentLabel: NoteTableViewCell!
+    @IBOutlet weak var contentLabel: UILabel!
+    
     
     
     

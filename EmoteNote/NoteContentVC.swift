@@ -12,12 +12,13 @@ class NoteContentVC: UIViewController {
     
     let store = NoteDataStore.sharedInstance
     
-    var selectedNote : Note?
+    var selectedNote : Note!
 
     @IBOutlet weak var noteContentTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setColor()
         setNoteViewConstraints()
         setNoteData()
 
@@ -41,6 +42,9 @@ class NoteContentVC: UIViewController {
         noteContentTextView.isScrollEnabled = true
     }
     
+    func setColor() {
+        noteContentTextView.backgroundColor = ColorPallet.noteBackgroundColor
+    }
     // keyword content
 
 }

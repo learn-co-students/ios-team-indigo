@@ -32,6 +32,8 @@
 		BEA367641EAA66160077D080 /* Cabin-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675C1EAA66160077D080 /* Cabin-Regular.otf */; };
 		BEA367651EAA66160077D080 /* Cabin-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675D1EAA66160077D080 /* Cabin-SemiBold.otf */; };
 		BEA367661EAA66160077D080 /* Cabin-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */; };
+		BEA5FE6E1EAA86E2004704D0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; };
+		BEA5FE6F1EAA86E2004704D0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */; };
 		BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */; };
 		BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E0701EA945DC008345FE /* DoubleConverter.swift */; };
@@ -71,6 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BEA5FE6F1EAA86E2004704D0 /* Charts.framework in Embed Frameworks */,
 				BE9DE61C1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Embed Frameworks */,
 				BE9DE6201EA53780004E05CE /* RestKit.framework in Embed Frameworks */,
 			);
@@ -110,6 +113,7 @@
 		BEA3675C1EAA66160077D080 /* Cabin-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.otf"; sourceTree = "<group>"; };
 		BEA3675D1EAA66160077D080 /* Cabin-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.otf"; sourceTree = "<group>"; };
 		BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		BEA5FE6D1EAA86E2004704D0 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
 		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
 		BEB3E0701EA945DC008345FE /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA5FE6E1EAA86E2004704D0 /* Charts.framework in Frameworks */,
 				BE9DE61B1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Frameworks */,
 				BE9DE61F1EA53780004E05CE /* RestKit.framework in Frameworks */,
 			);
@@ -146,6 +151,7 @@
 		BE9DE5D61EA53311004E05CE = {
 			isa = PBXGroup;
 			children = (
+				BEA5FE6D1EAA86E2004704D0 /* Charts.framework */,
 				BE9DE61E1EA53780004E05CE /* RestKit.framework */,
 				BE9DE61A1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework */,
 				BEA367671EAA661C0077D080 /* Resources */,

@@ -20,4 +20,5 @@ class ColorPallet {
     static let saveButtonColor = UIColor(red: 133/225, green: 151/225, blue: 181/225, alpha: 1) // 79, 137, 113
     static let noteBackgroundColor = UIColor(red: 213/225, green: 220/225, blue: 232/225, alpha: 1) // 213, 220, 232
     
+    
 }

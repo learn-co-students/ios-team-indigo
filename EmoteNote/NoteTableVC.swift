@@ -54,6 +54,7 @@ class NoteTableVC: UITableViewController {
         if let strDate = note.date {
             let result = dateFormatter.string(from: strDate as Date)
             cell.dateLabel?.text = String(describing: result)
+            cell.contentLabel?.text = note.content!
         }
         
         // cell.setBackgroundColors()
@@ -68,10 +69,11 @@ class NoteTableVC: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("cell has been tapped")
         if segue.identifier != segueIdentifier { return }
         if let dest = segue.destination as? NoteContentVC,
             let indexPath = tableView.indexPathForSelectedRow {
-            dest.selectedNote = store.notes[(indexPath as NSIndexPath).row]
+            dest.selectedNote = store.notes[indexPath.row]
         }
     }
    
