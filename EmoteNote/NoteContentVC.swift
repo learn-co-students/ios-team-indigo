@@ -7,17 +7,34 @@
 //
 
 import UIKit
+import Charts
 
 class NoteContentVC: UIViewController {
     
     let store = NoteDataStore.sharedInstance
     
+    
+    
     var selectedNote : Note!
+    
+//    var angerIndex : Double = 0.0
+//    var sadnessIndex : Double = 0.0
+//    var joyIndex : Double = 0
+//    var fearIndex : Double = 0
+//    var digustInded : Double = 0
+    var emotionIndex = ["anger", "sadness", "joy", "fear", "digust"]
+    var emotionIndexValue : [Double] = []
 
+    
+    
     @IBOutlet weak var noteContentTextView: UITextView!
+    @IBOutlet weak var barChartView: BarChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emotionIndexValue = setEmotionIndexes()
+        print(emotionIndexValue)
+        setChartItem()
         setColor()
         setNoteViewConstraints()
         setNoteData()
@@ -45,6 +62,21 @@ class NoteContentVC: UIViewController {
     func setColor() {
         noteContentTextView.backgroundColor = ColorPallet.noteBackgroundColor
     }
-    // keyword content
+    
+    // MARK : Need keyword content
+    
+    func setChartItem() {
+        barChartView.noDataText = "There is no data currently available for the current day"
+        barChartView.noDataTextColor = UIColor.red
+    }
 
+    func setEmotionIndexes() -> [Double] {
+        let angerIndex = selectedNote.anger
+        let sadnessIndex = selectedNote.sadness
+        let joyIndex = selectedNote.joy
+        let fearIndex = selectedNote.fear
+        let disgustIndex = selectedNote.disgust
+        
+        return [angerIndex, sadnessIndex, joyIndex, fearIndex, disgustIndex]
+    }
 }
