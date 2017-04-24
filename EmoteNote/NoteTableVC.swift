@@ -25,6 +25,7 @@ class NoteTableVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         store.getNotes()
         tableView.reloadData()
+        
     }
     
 

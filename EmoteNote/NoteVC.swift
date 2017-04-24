@@ -17,8 +17,12 @@ class NoteVC: UIViewController, UITextViewDelegate {
     
     
     @IBAction func saveNoteButton(_ sender: UIButton) {
-        store.saveNote(text: noteView.text) { (view) in
-            self.dismissNoteVC()
+        if noteView.text.isEmpty || noteView.text == "please type how you are feeling..." {
+            emptyAlert()
+        } else {
+            store.saveNote(text: noteView.text) { (view) in
+                self.dismissNoteVC()
+            }
         }
     }
     
@@ -67,6 +71,15 @@ class NoteVC: UIViewController, UITextViewDelegate {
         self.saveNoteButton.layer.cornerRadius = 2.5
         self.saveNoteButton.widthAnchor.constraint(equalTo: noteView.widthAnchor, multiplier: 0.95).isActive = true
         self.saveNoteButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    
+    func emptyAlert() {
+        let alert = UIAlertController(title: "Your note is empty", message: "Please add content to your note before saving", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        return
     }
     
 }
