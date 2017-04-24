@@ -9,26 +9,18 @@
 import UIKit
 import Charts
 
-class NoteContentVC: UIViewController {
+class NoteContentVC: UIViewController, IAxisValueFormatter {
     
     let store = NoteDataStore.sharedInstance
     
-    
-    
     var selectedNote : Note!
     
-//    var angerIndex : Double = 0.0
-//    var sadnessIndex : Double = 0.0
-//    var joyIndex : Double = 0
-//    var fearIndex : Double = 0
-//    var digustInded : Double = 0
-    var emotionIndex = ["anger", "sadness", "joy", "fear", "digust"]
+    var emotionIndex = ["Anger", "Sadness", "Joy", "Fear", "Digust"]
     var emotionIndexValue : [Double] = []
-
-    
     
     @IBOutlet weak var noteContentTextView: UITextView!
     @IBOutlet weak var barChartView: BarChartView!
+    weak var axisFormatDelegate: IAxisValueFormatter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +30,13 @@ class NoteContentVC: UIViewController {
         setColor()
         setNoteViewConstraints()
         setNoteData()
-
+        axisFormatDelegate = self
+        
+        setChart(dataPoints: emotionIndex, values: emotionIndexValue)
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,10 +61,9 @@ class NoteContentVC: UIViewController {
     // MARK : Need keyword content
     
     func setChartItem() {
-        barChartView.noDataText = "There is no data currently available for the current day"
         barChartView.noDataTextColor = UIColor.red
     }
-
+    
     func setEmotionIndexes() -> [Double] {
         let angerIndex = selectedNote.anger
         let sadnessIndex = selectedNote.sadness
@@ -79,4 +73,34 @@ class NoteContentVC: UIViewController {
         
         return [angerIndex, sadnessIndex, joyIndex, fearIndex, disgustIndex]
     }
+    
+    
+    
+    func setChart(dataPoints: [String], values: [Double]) {
+        barChartView.noDataText = "There is no data currently available for the current day"
+        
+        var dataEntries: [BarChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let labelString = dataPoints[i]
+            let label = NSString(string: labelString)
+            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i], data: label)
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Emotion Index")
+        let chartData = BarChartData(dataSet: chartDataSet)
+        
+        
+        barChartView.data = chartData
+        barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:emotionIndex)
+        barChartView.xAxis.granularity = 1
+        
+    }
+    
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        return emotionIndex[Int(value)]
+    }
+    
+    
 }

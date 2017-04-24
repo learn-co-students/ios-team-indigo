@@ -57,14 +57,7 @@ class NoteTableVC: UITableViewController {
             cell.contentLabel?.text = note.content!
         }
         
-        // cell.setBackgroundColors()
-        
-//        cell.angerLabel?.text = String(note.anger)
-//        cell.sadnessLabel?.text = String(note.sadness)
-//        cell.joyLabel?.text = String(note.joy)
-//        cell.fearLabel?.text = String(note.fear)
-//        cell.disgustLabel?.text = String(note.disgust)
-        
+        // cell.setBackgroundColors()x
         return cell
     }
     
