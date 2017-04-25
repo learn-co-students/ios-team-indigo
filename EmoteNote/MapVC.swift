@@ -11,6 +11,8 @@ import MapKit
 import CoreLocation
 
 class MapVC: UIViewController, CLLocationManagerDelegate {
+    
+    let store = NoteDataStore.sharedInstance
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -18,17 +20,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.requestAlwaysAuthorization()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-
-
-        // Ask for Authorisation from the User.
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
-
+        setLocationsServices()
         // Do any additional setup after loading the view.
     }
 
@@ -38,12 +30,25 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        var userLocation:CLLocation = locations[0] as! CLLocation
-        let long = userLocation.coordinate.longitude;
-        let lat = userLocation.coordinate.latitude;
+        let userLocation:CLLocation = locations[0] 
+//        let long = userLocation.coordinate.longitude;
+//        let lat = userLocation.coordinate.latitude;
         //Do What ever you want with it
             locationManager.stopUpdatingLocation()
-        print(long, lat)
     }
+    
+    func setLocationsServices() {
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        
+        
+        // Ask for Authorisation from the User.
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+
 
 }

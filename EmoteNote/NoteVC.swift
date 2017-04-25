@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class NoteVC: UIViewController, UITextViewDelegate {
+class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     
     let store = NoteDataStore.sharedInstance
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var saveNoteButton: UIButton!
     @IBOutlet weak var noteView: UITextView!
@@ -20,9 +23,12 @@ class NoteVC: UIViewController, UITextViewDelegate {
         if noteView.text.isEmpty || noteView.text == "please type how you are feeling..." {
             emptyAlert()
         } else {
-            store.saveNote(text: noteView.text) { (view) in
-                self.dismissNoteVC()
-            }
+            store.saveNote(text: noteView.text,
+                           latitude: (locationManager.location?.coordinate.latitude)!,
+                           longitude: (locationManager.location?.coordinate.longitude)!,
+                           completion: {
+                            self.dismissNoteVC()
+            })
         }
     }
     
@@ -31,6 +37,7 @@ class NoteVC: UIViewController, UITextViewDelegate {
         setBackgroundColor()
         setNoteConstraints()
         styleSaveButton()
+        setLocationsServices()
         // Do any additional setup after loading the view.
     }
     
@@ -81,5 +88,24 @@ class NoteVC: UIViewController, UITextViewDelegate {
         present(alert, animated: true, completion: nil)
         return
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let _:CLLocation = locations[0]
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func setLocationsServices() {
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        
+        
+        // Ask for Authorisation from the User.
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    
     
 }

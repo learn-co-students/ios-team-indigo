@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 import UIKit
+import MapKit
+import CoreLocation
 
 final class NoteDataStore {
     static let sharedInstance = NoteDataStore()
@@ -41,14 +43,10 @@ final class NoteDataStore {
         }
     }
     
-    func saveNote(text: String, completion: @escaping (Void) -> Void){
+    func saveNote(text: String, latitude: Double, longitude: Double, completion: @escaping () -> ()){
         
-        // pop up if empty
-        // let contextDelegate = (UIApplication.shared.delegate as! AppDelegate)
         let context = persistentContainer.viewContext
         let note = Note(context: context)
-        
-        // note.content = text
         
         EmotionAPI.getEmotionFor(bigText: text) { (result) in
             
@@ -64,14 +62,12 @@ final class NoteDataStore {
                 note.fear = DoubleConverter.willConvertDouble(as: scores.fear!)
                 note.disgust = DoubleConverter.willConvertDouble(as: scores.disgust!)
             }
+            
             note.content = text
             note.date = Date() as NSDate
-            if let date = note.date {
-                print(date)
-            }
-            if let content = note.content {
-                print(content)
-            }
+            note.latitude = latitude
+            note.longitude = longitude
+            
             self.saveContext()
             print("saving a note")
             completion()
@@ -88,6 +84,8 @@ final class NoteDataStore {
             print(self.notes)
         } catch {
             print("could not fetch any data")
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
     }
     

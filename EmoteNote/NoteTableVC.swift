@@ -57,8 +57,7 @@ class NoteTableVC: UITableViewController {
             cell.dateLabel?.text = String(describing: result)
             cell.contentLabel?.text = note.content!
         }
-        
-        // cell.setBackgroundColors()x
+    
         return cell
     }
     
