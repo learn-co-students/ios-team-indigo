@@ -76,7 +76,6 @@ final class NoteDataStore {
     
     func getNotes() {
         print("getNote is being called")
-        // let contextDelegate = (UIApplication.shared.delegate as! AppDelegate)
         let context = persistentContainer.viewContext
         
         do {

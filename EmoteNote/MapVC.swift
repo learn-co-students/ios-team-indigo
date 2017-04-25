@@ -13,6 +13,10 @@ import CoreLocation
 class MapVC: UIViewController, CLLocationManagerDelegate {
     
     let store = NoteDataStore.sharedInstance
+    
+    var notes : [Note] = []
+    
+    var pins : [MapPin] = []
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -21,6 +25,9 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLocationsServices()
+        createNoteArray()
+        populatePins()
+        createPins(pinArray: pins)
         // Do any additional setup after loading the view.
     }
 
@@ -41,14 +48,46 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        
-        
         // Ask for Authorisation from the User.
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
     }
+    
+    func createNoteArray() {
+        for note in store.notes {
+            notes.append(note)
+        }
+        print(notes)
+    }
+    
+    func populatePins() {
+        for note in notes {
+            let Cllocation = CLLocationCoordinate2DMake(note.latitude, note.longitude)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            
+            if let strDate = note.date {
+                let result = dateFormatter.string(from: strDate as Date)
+            
+            pins.append(MapPin(title: String(describing: result), score: note.score, coordinate: Cllocation))
+            }
+        }
+        print("i am printing some pins \(pins)")
+    }
 
+    func createPins(pinArray : [MapPin]) {
+        for pins in pinArray {
+            let pinObj = MKPointAnnotation()
+            pinObj.coordinate = pins.coordinate
+            pinObj.title = pins.title
+            self.mapView.addAnnotation(pinObj)
+        }
+    }
 
 }
+
+
+
+
