@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5F91EAEA45C007A6676 /* MapVC.swift */; };
-		BE13EC931EAFF3660029DFD9 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13EC921EAFF3660029DFD9 /* ColorPicker.swift */; };
 		BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24AC221EAE893A000D34B0 /* MapPin.swift */; };
 		BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24AC241EAE8D6D000D34B0 /* MapKit.framework */; };
 		BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4482241EAA5A9800126402 /* NoteContentVC.swift */; };
@@ -38,9 +37,10 @@
 		BEA367661EAA66160077D080 /* Cabin-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */; };
 		BEA5FE6E1EAA86E2004704D0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; };
 		BEA5FE6F1EAA86E2004704D0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */; };
 		BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */; };
 		BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E0701EA945DC008345FE /* DoubleConverter.swift */; };
+		BED1FCB21EB0FBC600E451ED /* Cabin-Bold.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367571EAA66160077D080 /* Cabin-Bold.otf */; };
+		BED1FCB31EB0FBC600E451ED /* Cabin-BoldItalic.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367581EAA66160077D080 /* Cabin-BoldItalic.otf */; };
 		BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7F3521EA7D7F300221251 /* NoteDataStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +77,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BED1FCB21EB0FBC600E451ED /* Cabin-Bold.otf in Embed Frameworks */,
+				BED1FCB31EB0FBC600E451ED /* Cabin-BoldItalic.otf in Embed Frameworks */,
 				BEA5FE6F1EAA86E2004704D0 /* Charts.framework in Embed Frameworks */,
 				BE9DE61C1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Embed Frameworks */,
 				BE9DE6201EA53780004E05CE /* RestKit.framework in Embed Frameworks */,
@@ -88,7 +90,6 @@
 
 /* Begin PBXFileReference section */
 		BE07C5F91EAEA45C007A6676 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		BE13EC921EAFF3660029DFD9 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		BE24AC221EAE893A000D34B0 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		BE24AC241EAE8D6D000D34B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BE4482241EAA5A9800126402 /* NoteContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteContentVC.swift; sourceTree = "<group>"; };
@@ -122,7 +123,6 @@
 		BEA3675D1EAA66160077D080 /* Cabin-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.otf"; sourceTree = "<group>"; };
 		BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		BEA5FE6D1EAA86E2004704D0 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
-		BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
 		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
 		BEB3E0701EA945DC008345FE /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
 		BED7F3521EA7D7F300221251 /* NoteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataStore.swift; sourceTree = "<group>"; };
@@ -232,7 +232,6 @@
 				BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */,
 				BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */,
 				BE9DE6291EA6647E004E05CE /* NoteVC.swift */,
-				BEB3E06B1EA7FCC7008345FE /* CalenderVC.swift */,
 				BE4482241EAA5A9800126402 /* NoteContentVC.swift */,
 				BE07C5F91EAEA45C007A6676 /* MapVC.swift */,
 			);
@@ -254,7 +253,6 @@
 				BED7F3521EA7D7F300221251 /* NoteDataStore.swift */,
 				BE9DE6211EA537B3004E05CE /* EmotionApi.swift */,
 				BE24AC221EAE893A000D34B0 /* MapPin.swift */,
-				BE13EC921EAFF3660029DFD9 /* ColorPicker.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -433,7 +431,6 @@
 			files = (
 				BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */,
 				BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */,
-				BE13EC931EAFF3660029DFD9 /* ColorPicker.swift in Sources */,
 				BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
@@ -442,7 +439,6 @@
 				BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */,
 				BE9DE6221EA537B3004E05CE /* EmotionApi.swift in Sources */,
 				BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */,
-				BEB3E06C1EA7FCC7008345FE /* CalenderVC.swift in Sources */,
 				BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */,
 				BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */,
 				BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */,

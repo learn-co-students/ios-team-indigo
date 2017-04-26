@@ -13,6 +13,8 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     
     let store = NoteDataStore.sharedInstance
     
+    let font = UIFont(name: "Cabin-Bold", size: 12)
+    
     var selectedNote : Note!
     
     var emotionIndex = ["Anger", "Sadness", "Joy", "Fear", "Digust"]
@@ -28,6 +30,7 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         print(emotionIndexValue)
         setChartItem()
         setColor()
+        // setNoteStyling()
         setNoteViewConstraints()
         setNoteData()
         axisFormatDelegate = self
@@ -59,6 +62,11 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     }
     
     // MARK : Need keyword content
+    
+    func setNoteStyling() {
+        print("i am styling")
+        self.noteContentTextView.font = font
+    }
     
     func setChartItem() {
         barChartView.noDataTextColor = UIColor.red
