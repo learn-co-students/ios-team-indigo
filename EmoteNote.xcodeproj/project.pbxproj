@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5F91EAEA45C007A6676 /* MapVC.swift */; };
+		BE13EC931EAFF3660029DFD9 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13EC921EAFF3660029DFD9 /* ColorPicker.swift */; };
 		BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24AC221EAE893A000D34B0 /* MapPin.swift */; };
 		BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24AC241EAE8D6D000D34B0 /* MapKit.framework */; };
 		BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4482241EAA5A9800126402 /* NoteContentVC.swift */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		BE07C5F91EAEA45C007A6676 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		BE13EC921EAFF3660029DFD9 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		BE24AC221EAE893A000D34B0 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		BE24AC241EAE8D6D000D34B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BE4482241EAA5A9800126402 /* NoteContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteContentVC.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				BED7F3521EA7D7F300221251 /* NoteDataStore.swift */,
 				BE9DE6211EA537B3004E05CE /* EmotionApi.swift */,
 				BE24AC221EAE893A000D34B0 /* MapPin.swift */,
+				BE13EC921EAFF3660029DFD9 /* ColorPicker.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			files = (
 				BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */,
 				BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */,
+				BE13EC931EAFF3660029DFD9 /* ColorPicker.swift in Sources */,
 				BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,

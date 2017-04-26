@@ -10,8 +10,11 @@ import Foundation
 import CoreLocation
 import MapKit
 
-class MapPin : NSObject, MKAnnotation{
+
+class MapPin : NSObject, MKAnnotation {
     
+    
+    let identifier : String = "myAnnotation"
     let title : String?
     let score : Double?
     let coordinate : CLLocationCoordinate2D
