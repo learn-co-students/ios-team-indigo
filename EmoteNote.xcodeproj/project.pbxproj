@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE0530F51EB12A3600C50DE4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */; };
+		BE0530FC1EB132E700C50DE4 /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */; };
 		BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5F91EAEA45C007A6676 /* MapVC.swift */; };
 		BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24AC221EAE893A000D34B0 /* MapPin.swift */; };
 		BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24AC241EAE8D6D000D34B0 /* MapKit.framework */; };
@@ -39,7 +40,6 @@
 		BEA5FE6E1EAA86E2004704D0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; };
 		BEA5FE6F1EAA86E2004704D0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */; };
-		BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E0701EA945DC008345FE /* DoubleConverter.swift */; };
 		BED1FCB21EB0FBC600E451ED /* Cabin-Bold.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367571EAA66160077D080 /* Cabin-Bold.otf */; };
 		BED1FCB31EB0FBC600E451ED /* Cabin-BoldItalic.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367581EAA66160077D080 /* Cabin-BoldItalic.otf */; };
 		BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7F3521EA7D7F300221251 /* NoteDataStore.swift */; };
@@ -91,6 +91,7 @@
 
 /* Begin PBXFileReference section */
 		BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
 		BE07C5F91EAEA45C007A6676 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		BE24AC221EAE893A000D34B0 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		BE24AC241EAE8D6D000D34B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -126,7 +127,6 @@
 		BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		BEA5FE6D1EAA86E2004704D0 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
-		BEB3E0701EA945DC008345FE /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
 		BED7F3521EA7D7F300221251 /* NoteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,8 +252,8 @@
 		BE9DE62E1EA6879D004E05CE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */,
 				BE9DE6231EA53917004E05CE /* Credentials .swift */,
-				BEB3E0701EA945DC008345FE /* DoubleConverter.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -451,8 +451,8 @@
 				BE9DE6221EA537B3004E05CE /* EmotionApi.swift in Sources */,
 				BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */,
 				BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */,
+				BE0530FC1EB132E700C50DE4 /* DoubleConverter.swift in Sources */,
 				BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */,
-				BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */,
 				BE0530F51EB12A3600C50DE4 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

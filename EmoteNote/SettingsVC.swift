@@ -16,8 +16,11 @@ class SettingsVC: UIViewController {
     @IBAction func clearButton(_ sender: Any) {
         didClickDelete()
     }
+    @IBOutlet weak var clearButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        styleClearButton()
 
         // Do any additional setup after loading the view.
     }
@@ -43,6 +46,10 @@ class SettingsVC: UIViewController {
         present(refreshAlert, animated: true, completion: nil)
     }
     
+    func styleClearButton() {
+        self.clearButton.backgroundColor = ColorPallet.saveButtonColor
+        self.clearButton.layer.cornerRadius = 2.5
+    }
     
 
 

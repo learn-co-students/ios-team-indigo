@@ -108,4 +108,5 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     
     
     
+    
 }
