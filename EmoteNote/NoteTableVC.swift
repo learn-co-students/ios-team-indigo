@@ -56,14 +56,9 @@ class NoteTableVC: UITableViewController {
             let result = dateFormatter.string(from: strDate as Date)
             cell.dateLabel?.text = String(describing: result)
             cell.contentLabel?.text = note.content!
-            
-        
-            
-            cell.customCircle.backgroundColor = setColorCircle(score: note.score)
-            cell.customCircle.layer.cornerRadius = cell.customCircle.frame.size.width/2
-            
+            cell.setFont()
+            cell.setCircle(note: note)
         }
-    
         return cell
     }
     
@@ -75,16 +70,5 @@ class NoteTableVC: UITableViewController {
             dest.selectedNote = store.notes[indexPath.row]
         }
     }
-    
-    func setColorCircle(score : Double) -> UIColor {
-        if score >= 0 {
-            return UIColor(red: 190/225, green: 237/225, blue: (166/225), alpha: 1) // 171, 214, 175
-        } else {
-            return UIColor(red: 226/225, green: 131/225, blue: (131/224), alpha: 1) // 226, 131, 131
-        }
-    }
-    
-    
-   
 
 }

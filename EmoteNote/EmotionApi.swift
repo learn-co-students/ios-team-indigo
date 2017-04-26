@@ -56,7 +56,6 @@ class EmotionAPI {
         let version = Constants.versionDate
         
         let naturalLanguageUnderstanding = NaturalLanguageUnderstanding(username: username, password: password, version: version)
-        // let textToAnalyze = "Today i hung out with my boyfriend and it made me really happy. But then i saw a bird get hit by a car and i started to cry"
         let features = Features(keywords: KeywordsOptions())
         let parameters = Parameters(features: features, text: textToAnalyze)
         let failure = { (error: Error) in print(error) }
