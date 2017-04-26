@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uVD-jk-6j0">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,11 +24,11 @@
                         <viewControllerLayoutGuide type="bottom" id="gzL-CN-H83"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UxQ-Ym-pzC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ER1-av-O9T">
-                                <rect key="frame" x="16" y="20" width="343" height="533"/>
+                                <rect key="frame" x="20" y="33" width="374" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -37,31 +37,47 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4E-C0-Sd7">
-                                <rect key="frame" x="170" y="591" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
+                                <rect key="frame" x="189.66666666666666" y="635" width="35" height="33"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="saveNoteButton:" destination="cbp-I0-rM3" eventType="touchUpInside" id="uaS-T1-2k0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Geo-ht-Xtd">
+                                <rect key="frame" x="182.66666666666666" y="676" width="49" height="33"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="cbp-I0-rM3" eventType="touchUpInside" id="uGV-Gh-gj8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.7906478388" green="0.84279298170000005" blue="0.92115955220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ER1-av-O9T" firstAttribute="leading" secondItem="UxQ-Ym-pzC" secondAttribute="leadingMargin" id="1Hd-Yc-edJ"/>
-                            <constraint firstItem="ER1-av-O9T" firstAttribute="top" secondItem="Wr4-2l-7ne" secondAttribute="bottom" id="NlG-ec-Fis"/>
-                            <constraint firstItem="l4E-C0-Sd7" firstAttribute="centerX" secondItem="ER1-av-O9T" secondAttribute="centerX" id="OI5-hP-z2Z"/>
-                            <constraint firstItem="ER1-av-O9T" firstAttribute="trailing" secondItem="UxQ-Ym-pzC" secondAttribute="trailingMargin" id="R0S-A3-0Ud"/>
-                            <constraint firstItem="l4E-C0-Sd7" firstAttribute="top" secondItem="ER1-av-O9T" secondAttribute="bottom" constant="38" id="Sk3-QB-UT6"/>
-                            <constraint firstItem="gzL-CN-H83" firstAttribute="top" secondItem="ER1-av-O9T" secondAttribute="bottom" constant="114" id="gfF-lA-VtT"/>
+                            <constraint firstItem="ER1-av-O9T" firstAttribute="trailing" secondItem="UxQ-Ym-pzC" secondAttribute="trailingMargin" id="0WT-4i-Nek"/>
+                            <constraint firstItem="Geo-ht-Xtd" firstAttribute="centerX" secondItem="UxQ-Ym-pzC" secondAttribute="centerX" id="HjK-ab-hj6"/>
+                            <constraint firstItem="gzL-CN-H83" firstAttribute="top" secondItem="Geo-ht-Xtd" secondAttribute="bottom" constant="27" id="TI4-LD-VoW"/>
+                            <constraint firstItem="l4E-C0-Sd7" firstAttribute="centerX" secondItem="UxQ-Ym-pzC" secondAttribute="centerX" id="Weq-OT-q6s"/>
+                            <constraint firstItem="Geo-ht-Xtd" firstAttribute="top" secondItem="l4E-C0-Sd7" secondAttribute="bottom" constant="8" symbolic="YES" id="WsS-Bh-CAN"/>
+                            <constraint firstItem="ER1-av-O9T" firstAttribute="leading" secondItem="UxQ-Ym-pzC" secondAttribute="leadingMargin" id="XBU-vk-oRq"/>
+                            <constraint firstItem="ER1-av-O9T" firstAttribute="top" secondItem="Wr4-2l-7ne" secondAttribute="bottom" constant="13" id="jEf-ov-351"/>
+                            <constraint firstItem="l4E-C0-Sd7" firstAttribute="top" secondItem="ER1-av-O9T" secondAttribute="bottom" constant="19" id="vZu-LI-vz1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="Geo-ht-Xtd" id="QMG-6h-itm"/>
                         <outlet property="noteView" destination="ER1-av-O9T" id="HQm-8T-jeg"/>
                         <outlet property="saveNoteButton" destination="l4E-C0-Sd7" id="cyg-Te-ocU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnl-kj-DhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4268" y="-715"/>
+            <point key="canvasLocation" x="5276" y="-718"/>
         </scene>
         <!--Note ContentVC-->
         <scene sceneID="1UE-eJ-hW2">
@@ -72,7 +88,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uTH-dl-llG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0MS-eJ-YBs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-qj-Z5Y">
@@ -108,19 +124,19 @@
                         <viewControllerLayoutGuide type="bottom" id="3rw-K1-jwb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I86-g4-NRe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4uJ-h9-kjE">
-                                <rect key="frame" x="16" y="90" width="343" height="297"/>
+                                <rect key="frame" x="12" y="72" width="390" height="607"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4uJ-h9-kjE" firstAttribute="trailing" secondItem="I86-g4-NRe" secondAttribute="trailingMargin" id="KB5-AK-Ugv"/>
-                            <constraint firstItem="4uJ-h9-kjE" firstAttribute="leading" secondItem="I86-g4-NRe" secondAttribute="leadingMargin" id="VBH-iz-EYJ"/>
-                            <constraint firstItem="4uJ-h9-kjE" firstAttribute="top" secondItem="agm-MY-alN" secondAttribute="bottom" constant="26" id="d2r-Rf-T5y"/>
-                            <constraint firstItem="3rw-K1-jwb" firstAttribute="top" secondItem="4uJ-h9-kjE" secondAttribute="bottom" constant="231" id="ipQ-Me-aHd"/>
+                            <constraint firstItem="4uJ-h9-kjE" firstAttribute="trailing" secondItem="I86-g4-NRe" secondAttribute="trailingMargin" constant="8" id="KB5-AK-Ugv"/>
+                            <constraint firstItem="4uJ-h9-kjE" firstAttribute="leading" secondItem="I86-g4-NRe" secondAttribute="leadingMargin" constant="-8" id="VBH-iz-EYJ"/>
+                            <constraint firstItem="4uJ-h9-kjE" firstAttribute="top" secondItem="agm-MY-alN" secondAttribute="bottom" constant="8" id="d2r-Rf-T5y"/>
+                            <constraint firstItem="3rw-K1-jwb" firstAttribute="top" secondItem="4uJ-h9-kjE" secondAttribute="bottom" constant="8" id="ipQ-Me-aHd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="4KW-Fx-dq3"/>
@@ -130,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5e-1K-wE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4703" y="806"/>
+            <point key="canvasLocation" x="4701.6000000000004" y="805.54722638680664"/>
         </scene>
         <!--Settings-->
         <scene sceneID="q1y-cB-bi6">
@@ -141,11 +157,11 @@
                         <viewControllerLayoutGuide type="bottom" id="9dV-kW-VvQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tk9-VN-qjA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwP-Aa-Qrj">
-                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <rect key="frame" x="20" y="84" width="374" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="clearButton:" destination="dAG-U1-CmG" eventType="touchUpInside" id="bVJ-CZ-zXX"/>
@@ -173,15 +189,15 @@
             <objects>
                 <tableViewController id="dG6-45-RU1" customClass="NoteTableVC" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" id="BW5-29-qxh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteIdentifier" rowHeight="106" id="9Ze-jr-9y6" customClass="NoteTableViewCell" customModule="EmoteNote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="106"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ze-jr-9y6" id="mA4-c2-0Xs" customClass="NoteTableViewCell" customModule="EmoteNote" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WI1-OG-1j4">

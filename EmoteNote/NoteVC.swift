@@ -15,8 +15,12 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     let store = NoteDataStore.sharedInstance
     let locationManager = CLLocationManager()
     
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveNoteButton: UIButton!
     @IBOutlet weak var noteView: UITextView!
+    @IBAction func cancelButton(_ sender: UIButton) {
+        self.dismissNoteVC()
+    }
     
     
     @IBAction func saveNoteButton(_ sender: UIButton) {
@@ -37,6 +41,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         setBackgroundColor()
         setNoteConstraints()
         styleSaveButton()
+        styleCancelButtonI()
         setLocationsServices()
         // Do any additional setup after loading the view.
     }
@@ -76,8 +81,15 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     func styleSaveButton() {
         self.saveNoteButton.backgroundColor = ColorPallet.saveButtonColor
         self.saveNoteButton.layer.cornerRadius = 2.5
-        self.saveNoteButton.widthAnchor.constraint(equalTo: noteView.widthAnchor, multiplier: 0.95).isActive = true
+        self.saveNoteButton.widthAnchor.constraint(equalTo: noteView.widthAnchor).isActive = true
         self.saveNoteButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    
+    func styleCancelButtonI() {
+        self.cancelButton.backgroundColor = ColorPallet.saveButtonColor
+        self.cancelButton.layer.cornerRadius = 2.5
+        self.cancelButton.widthAnchor.constraint(equalTo: noteView.widthAnchor).isActive = true
+        self.cancelButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     func emptyAlert() {

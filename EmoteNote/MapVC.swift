@@ -26,15 +26,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let locationManager = CLLocationManager()
     
+    // MARK : complete after loading
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         setLocationsServices()
-        
-        // MARK : complete after loading 
-        
-        
-        
+        styleMapView()
+
         // Do any additional setup after loading the view.
     }
     
@@ -133,6 +132,9 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
+    func styleMapView() {
+        self.mapView.layer.cornerRadius = 2.5
+    }
     
     
 }
