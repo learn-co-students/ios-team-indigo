@@ -12,7 +12,7 @@ import CoreData
 class SettingsVC: UIViewController {
     
     let store = NoteDataStore.sharedInstance
-
+    
     @IBAction func clearButton(_ sender: Any) {
         didClickDelete()
     }
@@ -21,10 +21,10 @@ class SettingsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         styleClearButton()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,6 +51,6 @@ class SettingsVC: UIViewController {
         self.clearButton.layer.cornerRadius = 2.5
     }
     
-
-
+    
+    
 }

@@ -91,20 +91,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-qj-Z5Y">
-                                <rect key="frame" x="18" y="72" width="339" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-qj-Z5Y">
+                                <rect key="frame" x="10" y="72" width="394" height="275"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="DF4-sK-hOh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fe3-hc-cbs" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="18" y="355" width="343" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fe3-hc-cbs" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="10" y="355" width="394" height="298"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fe3-hc-cbs" firstAttribute="trailing" secondItem="wF9-qj-Z5Y" secondAttribute="trailing" id="7bS-cn-3KM"/>
+                            <constraint firstItem="wF9-qj-Z5Y" firstAttribute="top" secondItem="kgr-Fy-RuZ" secondAttribute="bottom" constant="8" id="HT6-au-o02"/>
+                            <constraint firstItem="Fe3-hc-cbs" firstAttribute="leading" secondItem="wF9-qj-Z5Y" secondAttribute="leading" id="SKT-S8-gCG"/>
+                            <constraint firstItem="uTH-dl-llG" firstAttribute="top" secondItem="Fe3-hc-cbs" secondAttribute="bottom" constant="34" id="TSn-Yc-Woq"/>
+                            <constraint firstItem="wF9-qj-Z5Y" firstAttribute="leading" secondItem="0MS-eJ-YBs" secondAttribute="leading" constant="10" id="YbJ-r1-IiO"/>
+                            <constraint firstAttribute="trailing" secondItem="wF9-qj-Z5Y" secondAttribute="trailing" constant="10" id="bnJ-mI-Lp6"/>
+                            <constraint firstItem="Fe3-hc-cbs" firstAttribute="top" secondItem="wF9-qj-Z5Y" secondAttribute="bottom" constant="8" symbolic="YES" id="jY7-Yv-hK5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="barChartView" destination="Fe3-hc-cbs" id="ZLj-dt-akM"/>
@@ -113,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COf-N0-uMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5276" y="35.532233883058474"/>
+            <point key="canvasLocation" x="5275.36231884058" y="35.054347826086961"/>
         </scene>
         <!--Map-->
         <scene sceneID="qmx-Te-8HH">
@@ -253,7 +263,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zqM-mz-Sc9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Table" id="82J-FA-N2c"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ynt-Nz-nRz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ynt-Nz-nRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -291,7 +301,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gz2-Zs-A1m" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="M42-uT-rG7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x4-Rn-pKO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0x4-Rn-pKO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -310,7 +320,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUe-AO-LXF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="231-rU-UgF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Dn-a9-Ef6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Dn-a9-Ef6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -38,6 +38,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        styleView()
         setBackgroundColor()
         setNoteConstraints()
         styleSaveButton()
@@ -67,6 +68,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         print("text view was clicked")
         self.noteView.text = ""
         self.noteView.textColor = UIColor.black
+        // TODO : correct text alignment spacing bug
     }
     
     func setBackgroundColor() {
@@ -111,11 +113,14 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         
-        
         // Ask for Authorisation from the User.
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    func styleView() {
+        self.view.backgroundColor = ColorPallet.cellBackgroundColor
     }
     
     

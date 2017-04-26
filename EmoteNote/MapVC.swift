@@ -33,7 +33,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         mapView.delegate = self
         setLocationsServices()
         styleMapView()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -98,7 +98,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             pinObj.coordinate = pins.coordinate
             pinObj.title = pins.title!
             let thisColor = setColor(value: pins.score!)
-
+            
             pinObj.pinTintColor = thisColor.adjust(by: CGFloat(pins.score!))
             self.mapView.addAnnotation(pinObj)
         }

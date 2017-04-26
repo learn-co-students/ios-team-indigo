@@ -15,7 +15,7 @@ class NoteTableVC: UITableViewController {
     
     var reuseIdentifier : String = "noteIdentifier"
     let segueIdentifier : String = "noteShowSegue"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -28,19 +28,19 @@ class NoteTableVC: UITableViewController {
         
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return store.notes.count
@@ -70,5 +70,5 @@ class NoteTableVC: UITableViewController {
             dest.selectedNote = store.notes[indexPath.row]
         }
     }
-
+    
 }

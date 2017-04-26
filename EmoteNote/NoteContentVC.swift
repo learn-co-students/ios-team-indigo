@@ -30,11 +30,9 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         print(emotionIndexValue)
         setChartItem()
         setColor()
-        // setNoteStyling()
         setNoteViewConstraints()
         setNoteData()
         axisFormatDelegate = self
-        
         setChart(dataPoints: emotionIndex, values: emotionIndexValue)
         
         // Do any additional setup after loading the view.
@@ -83,7 +81,6 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     }
     
     
-    
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "There is no data currently available for the current day"
         
@@ -119,12 +116,11 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         barChartView.chartDescription?.text = ""
         barChartView.leftAxis.axisMaximum = 1.0
         barChartView.rightAxis.axisMaximum = 1.0
-    
         
         // MARK : animation
         let animationDouble = 1.5
         barChartView.animate(xAxisDuration: animationDouble, yAxisDuration: animationDouble)
-    
+        
     }
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
