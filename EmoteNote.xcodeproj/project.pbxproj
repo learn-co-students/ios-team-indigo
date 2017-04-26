@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0530F51EB12A3600C50DE4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */; };
 		BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5F91EAEA45C007A6676 /* MapVC.swift */; };
 		BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24AC221EAE893A000D34B0 /* MapPin.swift */; };
 		BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24AC241EAE8D6D000D34B0 /* MapKit.framework */; };
@@ -89,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		BE07C5F91EAEA45C007A6676 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		BE24AC221EAE893A000D34B0 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		BE24AC241EAE8D6D000D34B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -157,6 +159,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE0530F61EB12A6000C50DE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		BE9DE5D61EA53311004E05CE = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +201,7 @@
 				BE9DE5F11EA53311004E05CE /* Info.plist */,
 				BE9DE5E91EA53311004E05CE /* EmoteNote.xcdatamodeld */,
 				BE9DE62F1EA688D2004E05CE /* Classes */,
+				BE0530F61EB12A6000C50DE4 /* Views */,
 				BE9DE62D1EA68769004E05CE /* Controllers */,
 				BEB3E06F1EA91960008345FE /* Styling */,
 				BE9DE62E1EA6879D004E05CE /* Utilities */,
@@ -234,6 +244,7 @@
 				BE9DE6291EA6647E004E05CE /* NoteVC.swift */,
 				BE4482241EAA5A9800126402 /* NoteContentVC.swift */,
 				BE07C5F91EAEA45C007A6676 /* MapVC.swift */,
+				BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -442,6 +453,7 @@
 				BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */,
 				BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */,
 				BEB3E0711EA945DC008345FE /* DoubleConverter.swift in Sources */,
+				BE0530F51EB12A3600C50DE4 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

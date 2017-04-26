@@ -132,6 +132,35 @@
             </objects>
             <point key="canvasLocation" x="4268" y="807"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="q1y-cB-bi6">
+            <objects>
+                <viewController id="dAG-U1-CmG" customClass="SettingsVC" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vcC-wg-5RW"/>
+                        <viewControllerLayoutGuide type="bottom" id="9dV-kW-VvQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tk9-VN-qjA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwP-Aa-Qrj">
+                                <rect key="frame" x="164" y="90" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clearButton:" destination="dAG-U1-CmG" eventType="touchUpInside" id="bVJ-CZ-zXX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="231-rU-UgF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEt-fn-4YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5276" y="806"/>
+        </scene>
         <!--Note TableVC-->
         <scene sceneID="yvX-PU-A8k">
             <objects>
@@ -226,6 +255,7 @@
                     <connections>
                         <segue destination="zqM-mz-Sc9" kind="relationship" relationship="viewControllers" id="PnV-JT-3q9"/>
                         <segue destination="c7s-Yh-k4K" kind="relationship" relationship="viewControllers" id="cbf-hx-ehx"/>
+                        <segue destination="dAG-U1-CmG" kind="relationship" relationship="viewControllers" id="CEN-Ab-HZT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncV-LF-hMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
