@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="2432.8000000000002" y="35.532233883058474"/>
         </scene>
-        <!--OnboardngVC-->
+        <!--onboardingVC-->
         <scene sceneID="rmG-DD-F4U">
             <objects>
-                <viewController id="uCb-Kp-iJt" customClass="OnboardngVC" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingVC" title="onboardingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uCb-Kp-iJt" customClass="OnboardngVC" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dqh-hV-PhN"/>
                         <viewControllerLayoutGuide type="bottom" id="lXb-e0-Wqv"/>
@@ -339,7 +339,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-D7-mYs">
                                 <rect key="frame" x="191.66666666666666" y="132" width="32" height="17.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

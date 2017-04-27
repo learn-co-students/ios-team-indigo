@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc :UIViewController
+        
+        if (UserDefaults.standard.value(forKey: "passcode") as? String) == nil {
+            // show onboarding view controller
+            vc = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
+        } else {
+            // show note tableview controller
+            vc = storyboard.instantiateInitialViewController()!
+        }
+        
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
