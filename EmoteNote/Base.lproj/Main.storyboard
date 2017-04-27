@@ -13,6 +13,9 @@
         <array key="Cabin-Regular.otf">
             <string>Cabin-Regular</string>
         </array>
+        <array key="Cabin-SemiBold.otf">
+            <string>Cabin-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--NoteVC-->
@@ -37,7 +40,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4E-C0-Sd7">
-                                <rect key="frame" x="189.66666666666666" y="635" width="35" height="33"/>
+                                <rect key="frame" x="190" y="635" width="35" height="33"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -259,7 +262,6 @@
         <!--Table-->
         <scene sceneID="2cO-59-8Go">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CXH-KN-pgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zqM-mz-Sc9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Table" id="82J-FA-N2c"/>
                     <toolbarItems/>
@@ -272,6 +274,7 @@
                         <segue destination="dG6-45-RU1" kind="relationship" relationship="rootViewController" id="5le-f5-gDZ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXH-KN-pgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3372" y="35.532233883058474"/>
         </scene>
@@ -294,6 +297,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncV-LF-hMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2432.8000000000002" y="35.532233883058474"/>
+        </scene>
+        <!--OnboardngVC-->
+        <scene sceneID="rmG-DD-F4U">
+            <objects>
+                <viewController id="uCb-Kp-iJt" customClass="OnboardngVC" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dqh-hV-PhN"/>
+                        <viewControllerLayoutGuide type="bottom" id="lXb-e0-Wqv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j4o-0l-GC8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cP-Tv-hPk">
+                                <rect key="frame" x="118" y="268" width="179" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to EmoteNote!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-WK-zmm">
+                                <rect key="frame" x="133" y="83.666666666666686" width="149" height="17.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="14"/>
+                                <color key="textColor" red="0.29070021160803866" green="0.3003157383419689" blue="0.27509466658797371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdQ-Qi-9lp">
+                                <rect key="frame" x="173" y="343" width="69" height="30"/>
+                                <color key="backgroundColor" red="0.84961949481865284" green="0.66815394296728114" blue="0.67647641153909088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="hqp-rV-WHt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="uCb-Kp-iJt" eventType="touchUpInside" id="fvz-yE-ppX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-D7-mYs">
+                                <rect key="frame" x="191.66666666666666" y="132" width="32" height="17.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98101522020725385" green="0.91589765669498235" blue="0.88866977083126608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="yfF-D7-mYs" firstAttribute="centerX" secondItem="j4o-0l-GC8" secondAttribute="centerX" id="BKO-F3-3Az"/>
+                            <constraint firstItem="8cP-Tv-hPk" firstAttribute="centerX" secondItem="j4o-0l-GC8" secondAttribute="centerX" id="Hhy-uc-lSK"/>
+                            <constraint firstItem="gdQ-Qi-9lp" firstAttribute="centerX" secondItem="uFg-WK-zmm" secondAttribute="centerX" id="PWz-Da-beo"/>
+                            <constraint firstItem="gdQ-Qi-9lp" firstAttribute="top" secondItem="8cP-Tv-hPk" secondAttribute="bottom" constant="45" id="VjR-lA-jCP"/>
+                            <constraint firstItem="yfF-D7-mYs" firstAttribute="top" secondItem="uFg-WK-zmm" secondAttribute="bottom" constant="31" id="ZKq-zb-Vqk"/>
+                            <constraint firstItem="8cP-Tv-hPk" firstAttribute="leading" secondItem="j4o-0l-GC8" secondAttribute="leadingMargin" constant="98" id="dW6-M2-Lxx"/>
+                            <constraint firstItem="yfF-D7-mYs" firstAttribute="top" secondItem="j4o-0l-GC8" secondAttribute="top" constant="132" id="f28-eP-t53"/>
+                            <constraint firstItem="gdQ-Qi-9lp" firstAttribute="centerX" secondItem="8cP-Tv-hPk" secondAttribute="centerX" id="hni-aZ-bwt"/>
+                            <constraint firstItem="8cP-Tv-hPk" firstAttribute="top" secondItem="dqh-hV-PhN" secondAttribute="bottom" constant="248" id="npD-Mh-E4c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="introTextLabel" destination="yfF-D7-mYs" id="sVS-8P-K6C"/>
+                        <outlet property="saveButton" destination="gdQ-Qi-9lp" id="4PN-Fv-dZ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ID-0T-BbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2407.2463768115945" y="804.61956521739137"/>
         </scene>
         <!--Map-->
         <scene sceneID="I0W-pv-EUu">
