@@ -8,15 +8,18 @@
 
 import UIKit
 
-class OnboardngVC: UIViewController {
+class OnboardngVC: UIViewController, UITextFieldDelegate {
     
     
     // TODO : passcode must be numerical and equal to 4 digits
+    // TODO : animate text appearing
 
     @IBOutlet weak var introTextLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
-    var introText : String = "Before we being, please enter a 4 digit numerical passcode to be use to access your notes in the future"
+    @IBOutlet weak var passcodeTextfield: UITextField!
+    
+    var introText : String = "Before we being, please enter a 4 digit numerical passcode. \nThis will be used to access your notes in the future."
     
     
     @IBAction func saveButton(_ sender: UIButton) {
@@ -25,6 +28,7 @@ class OnboardngVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextDelegateAndStlying()
         setIntroText()
         setButton()
 
@@ -42,7 +46,7 @@ class OnboardngVC: UIViewController {
     
     func setIntroText() {
         self.introTextLabel.text = introText
-        var width = view.frame.width
+        let width = view.frame.width
         
         self.introTextLabel.widthAnchor.constraint(equalToConstant: width * 0.90).isActive = true
         self.introTextLabel.adjustsFontSizeToFitWidth = true
@@ -51,10 +55,25 @@ class OnboardngVC: UIViewController {
     }
     
     func saveCode() {
-        // save code to user default
-        // make initial screen main
-        // present tableview screen
+        if passcodeTextfield.text?.isEmpty == true {
+            // alert that the user hasn't entered anything
+        } else {
+            
+        }
+    
     }
+    
+    func setTextDelegateAndStlying() {
+        // sets keyboard type to numbers
+        print("i am preparing a keyboard")
+        passcodeTextfield.delegate = self
+        passcodeTextfield.keyboardType = UIKeyboardType.numberPad
+        
+        // textfield entry styling
+        self.passcodeTextfield.textAlignment = NSTextAlignment.center
+        self.passcodeTextfield.maxLength = 4
+    }
+
     
 
 }

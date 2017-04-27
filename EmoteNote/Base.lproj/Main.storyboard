@@ -210,7 +210,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ze-jr-9y6" id="mA4-c2-0Xs" customClass="NoteTableViewCell" customModule="EmoteNote" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105.66666666666667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WI1-OG-1j4">
@@ -358,6 +358,7 @@
                     </view>
                     <connections>
                         <outlet property="introTextLabel" destination="yfF-D7-mYs" id="sVS-8P-K6C"/>
+                        <outlet property="passcodeTextfield" destination="8cP-Tv-hPk" id="Dm0-Wd-Apz"/>
                         <outlet property="saveButton" destination="gdQ-Qi-9lp" id="4PN-Fv-dZ9"/>
                     </connections>
                 </viewController>
