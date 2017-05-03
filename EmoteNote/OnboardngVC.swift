@@ -13,17 +13,21 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
     
     // TODO : passcode must be numerical and equal to 4 digits
     // TODO : animate text appearing
-
+    
     @IBOutlet weak var introTextLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var passcodeTextfield: UITextField!
     
-    var introText : String = "Before we being, please enter a 4 digit numerical passcode. \nThis will be used to access your notes in the future."
+    var introText : String = "Before we begin, please enter a 4 digit numerical passcode. \nThis will be used to access your notes in the future."
     
     
     @IBAction func saveButton(_ sender: UIButton) {
-        // save code to user defaults
+        if (passcodeTextfield.text?.characters.count)! < 4 {
+            emptyAlert()
+        } else {
+            saveCode()
+        }
     }
     
     override func viewDidLoad() {
@@ -31,10 +35,10 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         setTextDelegateAndStlying()
         setIntroText()
         setButton()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -56,11 +60,12 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
     
     func saveCode() {
         if passcodeTextfield.text?.isEmpty == true {
-            // alert that the user hasn't entered anything
+            emptyAlert()
         } else {
-            
+            setDefaults()
+            print("performing segue")
         }
-    
+        
     }
     
     func setTextDelegateAndStlying() {
@@ -72,8 +77,22 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         // textfield entry styling
         self.passcodeTextfield.textAlignment = NSTextAlignment.center
         self.passcodeTextfield.maxLength = 4
+        // secure entry
     }
-
     
-
+    func emptyAlert() {
+        let alert = UIAlertController(title: "Passcode field empty", message: "Please enter a 4 digit passcode", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        return
+    }
+    
+    func setDefaults() {
+        UserDefaults.standard.set(passcodeTextfield.text, forKey: "passcode")
+        print(passcodeTextfield.text)
+        performSegue(withIdentifier: "onboardingSegue", sender: self)
+    }
+    
 }
