@@ -18,9 +18,18 @@ class SettingsVC: UIViewController {
     }
     @IBOutlet weak var clearButton: UIButton!
     
+    @IBAction func resetButton(_ sender: UIButton) {
+        
+    }
+    @IBOutlet weak var resetButton: UIButton!
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         styleClearButton()
+        styleResetButton()
         
         // Do any additional setup after loading the view.
     }
@@ -31,7 +40,7 @@ class SettingsVC: UIViewController {
     }
     
     
-    func didClickDelete(){
+    func didClickDelete() {
         let refreshAlert = UIAlertController(title: "Clear Data?", message: "All note data will be lost.", preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
@@ -51,6 +60,21 @@ class SettingsVC: UIViewController {
         self.clearButton.layer.cornerRadius = 2.5
     }
     
+    func resetPasscode() {
+        // TODO : click to reset user defaults
+        // click > popup > enter > save + dismiss
+        
+        // limit to 4 characters, has to be different from current default 
+    }
+    
+    func didSavePasscode(passcode : String, completion: @escaping () -> ()) {
+        // save functionality
+    }
+    
+    func styleResetButton() {
+        self.clearButton.backgroundColor = ColorPallet.saveButtonColor
+        self.clearButton.layer.cornerRadius = 2.5
+    }
     
     
 }

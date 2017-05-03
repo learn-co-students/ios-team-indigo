@@ -11,8 +11,7 @@ import UIKit
 class OnboardngVC: UIViewController, UITextFieldDelegate {
     
     
-    // TODO : passcode must be numerical and equal to 4 digits
-    // TODO : animate text appearing
+    // TODO : animate text appearing > "pops"
     
     @IBOutlet weak var introTextLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
@@ -79,6 +78,8 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         self.passcodeTextfield.maxLength = 4
         // secure entry
         self.passcodeTextfield.isSecureTextEntry = true
+        self.passcodeTextfield.placeholder = "Please enter passcode here."
+        
     }
     
     func emptyAlert() {
@@ -92,7 +93,7 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
     
     func setDefaults() {
         UserDefaults.standard.set(passcodeTextfield.text, forKey: "passcode")
-        print(passcodeTextfield.text)
+        print(passcodeTextfield.text ?? "there is nothing")
         performSegue(withIdentifier: "onboardingSegue", sender: self)
     }
     

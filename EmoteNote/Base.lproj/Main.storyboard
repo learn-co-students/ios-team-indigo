@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ER1-av-O9T">
-                                <rect key="frame" x="20" y="33" width="374" height="585"/>
+                                <rect key="frame" x="20" y="33" width="374" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4E-C0-Sd7">
-                                <rect key="frame" x="188.66666666666666" y="637" width="38" height="32"/>
+                                <rect key="frame" x="190.33333333333334" y="635" width="35" height="33"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Geo-ht-Xtd">
-                                <rect key="frame" x="180.66666666666666" y="677" width="53" height="32"/>
+                                <rect key="frame" x="182.66666666666666" y="676" width="49" height="33"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -180,17 +180,30 @@
                                     <action selector="clearButton:" destination="dAG-U1-CmG" eventType="touchUpInside" id="bVJ-CZ-zXX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-lK-1Jb" userLabel="Change Button">
+                                <rect key="frame" x="20" y="130" width="374" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="dAG-U1-CmG" eventType="touchUpInside" id="PeQ-Xf-EYr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FwP-Aa-Qrj" firstAttribute="leading" secondItem="tk9-VN-qjA" secondAttribute="leadingMargin" id="ETC-NP-Uog"/>
+                            <constraint firstItem="AXa-lK-1Jb" firstAttribute="trailing" secondItem="tk9-VN-qjA" secondAttribute="trailingMargin" id="TO6-qV-cuJ"/>
+                            <constraint firstItem="AXa-lK-1Jb" firstAttribute="leading" secondItem="tk9-VN-qjA" secondAttribute="leadingMargin" id="Vx7-Z6-oyC"/>
                             <constraint firstItem="FwP-Aa-Qrj" firstAttribute="top" secondItem="vcC-wg-5RW" secondAttribute="bottom" constant="20" id="WFo-4t-MLT"/>
+                            <constraint firstItem="FwP-Aa-Qrj" firstAttribute="centerX" secondItem="tk9-VN-qjA" secondAttribute="centerX" id="eR4-D3-Xpd"/>
+                            <constraint firstItem="AXa-lK-1Jb" firstAttribute="centerX" secondItem="tk9-VN-qjA" secondAttribute="centerX" id="emr-Jw-76t"/>
                             <constraint firstItem="FwP-Aa-Qrj" firstAttribute="trailing" secondItem="tk9-VN-qjA" secondAttribute="trailingMargin" id="flG-jr-Rrq"/>
+                            <constraint firstItem="AXa-lK-1Jb" firstAttribute="top" secondItem="FwP-Aa-Qrj" secondAttribute="bottom" constant="16" id="ieZ-Q2-Wwp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="6J3-FR-FEe"/>
                     <connections>
                         <outlet property="clearButton" destination="FwP-Aa-Qrj" id="lg6-Hl-cac"/>
+                        <outlet property="resetButton" destination="AXa-lK-1Jb" id="Bew-ey-C0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEt-fn-4YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,7 +278,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zqM-mz-Sc9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Table" id="82J-FA-N2c"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ynt-Nz-nRz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ynt-Nz-nRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -317,13 +330,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to EmoteNote!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-WK-zmm">
-                                <rect key="frame" x="131.33333333333331" y="83.666666666666686" width="152.33333333333331" height="17.333333333333329"/>
+                                <rect key="frame" x="133.33333333333337" y="83.666666666666686" width="148.66666666666663" height="17.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="14"/>
                                 <color key="textColor" red="0.29070021160803866" green="0.3003157383419689" blue="0.27509466658797371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdQ-Qi-9lp">
-                                <rect key="frame" x="173" y="343" width="69" height="29"/>
+                                <rect key="frame" x="173" y="343" width="69" height="30"/>
                                 <color key="backgroundColor" red="0.84961949481865284" green="0.66815394296728114" blue="0.67647641153909088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="hqp-rV-WHt"/>
@@ -337,7 +350,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-D7-mYs">
-                                <rect key="frame" x="190.66666666666663" y="132" width="34.333333333333343" height="16.333333333333343"/>
+                                <rect key="frame" x="191" y="132" width="32" height="16.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -373,7 +386,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gz2-Zs-A1m" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="M42-uT-rG7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x4-Rn-pKO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0x4-Rn-pKO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -392,7 +405,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUe-AO-LXF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="231-rU-UgF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Dn-a9-Ef6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Dn-a9-Ef6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
