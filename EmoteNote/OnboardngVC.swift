@@ -78,6 +78,7 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         self.passcodeTextfield.textAlignment = NSTextAlignment.center
         self.passcodeTextfield.maxLength = 4
         // secure entry
+        self.passcodeTextfield.isSecureTextEntry = true
     }
     
     func emptyAlert() {
@@ -93,6 +94,11 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         UserDefaults.standard.set(passcodeTextfield.text, forKey: "passcode")
         print(passcodeTextfield.text)
         performSegue(withIdentifier: "onboardingSegue", sender: self)
+    }
+    
+    func toggleSecureEntry() {
+        // tap "show" -> isSecureEntry goes to false + label.text = "hide"
+        // tap "hide" -> isSecureEntry goes to true + label.text = "show"
     }
     
 }
