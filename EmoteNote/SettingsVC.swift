@@ -60,21 +60,13 @@ class SettingsVC: UIViewController {
         self.clearButton.layer.cornerRadius = 2.5
     }
     
-    func resetPasscode() {
-        // TODO : click to reset user defaults
-        // click > popup > enter > save + dismiss
-        
-        // limit to 4 characters, has to be different from current default 
-    }
-    
-    func didSavePasscode(passcode : String, completion: @escaping () -> ()) {
-        // save functionality
-    }
     
     func styleResetButton() {
         self.clearButton.backgroundColor = ColorPallet.saveButtonColor
         self.clearButton.layer.cornerRadius = 2.5
     }
+    
+    
     
     
 }

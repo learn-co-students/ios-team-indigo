@@ -83,7 +83,10 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
     }
     
     func emptyAlert() {
-        let alert = UIAlertController(title: "Passcode field empty", message: "Please enter a 4 digit passcode", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Passcode field empty",
+                                      message: "Please enter a 4 digit passcode",
+                                      preferredStyle: .alert)
+        
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         
