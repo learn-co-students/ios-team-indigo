@@ -17,6 +17,7 @@
 		BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */; };
 		BE6DEF1C1EB26A5700BEBF28 /* OnboardngVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF1B1EB26A5700BEBF28 /* OnboardngVC.swift */; };
 		BE6DEF1E1EB27C8C00BEBF28 /* maxLengthSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6DEF1D1EB27C8C00BEBF28 /* maxLengthSet.swift */; };
+		BE8F76DE1EC241A50099BE07 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F76DD1EC241A50099BE07 /* Animations.swift */; };
 		BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E21EA53311004E05CE /* AppDelegate.swift */; };
 		BE9DE5E81EA53311004E05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9DE5E61EA53311004E05CE /* Main.storyboard */; };
 		BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE5E91EA53311004E05CE /* EmoteNote.xcdatamodeld */; };
@@ -103,6 +104,7 @@
 		BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVC.swift; sourceTree = "<group>"; };
 		BE6DEF1B1EB26A5700BEBF28 /* OnboardngVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardngVC.swift; sourceTree = "<group>"; };
 		BE6DEF1D1EB27C8C00BEBF28 /* maxLengthSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = maxLengthSet.swift; sourceTree = "<group>"; };
+		BE8F76DD1EC241A50099BE07 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		BE9DE5DF1EA53311004E05CE /* EmoteNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoteNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9DE5E21EA53311004E05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9DE5E71EA53311004E05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		BEB3E06F1EA91960008345FE /* Styling */ = {
 			isa = PBXGroup;
 			children = (
+				BE8F76DD1EC241A50099BE07 /* Animations.swift */,
 				BE9DE62B1EA6657D004E05CE /* ColorPallet.swift */,
 			);
 			name = Styling;
@@ -463,6 +466,7 @@
 				BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */,
 				BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */,
 				BE0530FC1EB132E700C50DE4 /* DoubleConverter.swift in Sources */,
+				BE8F76DE1EC241A50099BE07 /* Animations.swift in Sources */,
 				BE6DEF1C1EB26A5700BEBF28 /* OnboardngVC.swift in Sources */,
 				BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */,
 				BE0530F51EB12A3600C50DE4 /* SettingsVC.swift in Sources */,

@@ -39,6 +39,8 @@ class SettingsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // TODO : abstract out alert functions
+    
     
     func didClickDelete() {
         let refreshAlert = UIAlertController(title: "Clear Data?", message: "All note data will be lost.", preferredStyle: UIAlertControllerStyle.alert)

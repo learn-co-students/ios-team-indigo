@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+func animateTextSlowEaseIn(textLabel: UILabel, duration: Double, delay: Double) {
+    UIView.animate(withDuration: duration, delay: delay, options: [.curveEaseOut], animations: {
+        textLabel.alpha = 0
+        textLabel.alpha = 1
+    }, completion: nil)
+}
