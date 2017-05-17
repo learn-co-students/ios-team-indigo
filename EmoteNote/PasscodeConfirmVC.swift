@@ -61,6 +61,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
         self.passcodeTextfield.placeholder = "Please enter passcode"
         self.passcodeTextfield.adjustsFontSizeToFitWidth = true
         self.passcodeTextfield.minimumFontSize = 10.0
+        self.passcodeTextfield.tintColor = UIColor.clear
         
     }
     
@@ -69,7 +70,11 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     }
     
     func didSelectOffKeyboard() {
-        // dismiss keyboard functionality 
+        // dismiss keyboard functionality
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) //This will hide the keyboard
     }
      
 }
