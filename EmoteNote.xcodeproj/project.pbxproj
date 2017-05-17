@@ -47,6 +47,7 @@
 		BED1FCB21EB0FBC600E451ED /* Cabin-Bold.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367571EAA66160077D080 /* Cabin-Bold.otf */; };
 		BED1FCB31EB0FBC600E451ED /* Cabin-BoldItalic.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367581EAA66160077D080 /* Cabin-BoldItalic.otf */; };
 		BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7F3521EA7D7F300221251 /* NoteDataStore.swift */; };
+		BEE5CEDC1ECD0368001E0598 /* PasscodeConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE5CEDB1ECD0368001E0598 /* PasscodeConfirmVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		BEA5FE6D1EAA86E2004704D0 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
 		BED7F3521EA7D7F300221251 /* NoteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataStore.swift; sourceTree = "<group>"; };
+		BEE5CEDB1ECD0368001E0598 /* PasscodeConfirmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeConfirmVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */,
 				BE6DEF1B1EB26A5700BEBF28 /* OnboardngVC.swift */,
 				BE4D2B8C1EBA5FF50094115B /* PasscodeChangeVC.swift */,
+				BEE5CEDB1ECD0368001E0598 /* PasscodeConfirmVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE5CEDC1ECD0368001E0598 /* PasscodeConfirmVC.swift in Sources */,
 				BE9DE62A1EA6647E004E05CE /* NoteVC.swift in Sources */,
 				BE6DEF1E1EB27C8C00BEBF28 /* maxLengthSet.swift in Sources */,
 				BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */,
