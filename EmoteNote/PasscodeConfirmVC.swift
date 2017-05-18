@@ -9,7 +9,7 @@
 import UIKit
 
 class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
-
+    
     // outlets
     @IBOutlet weak var passcodeLabel: UILabel!
     @IBOutlet weak var confirmButton: UIButton!
@@ -17,7 +17,8 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passcodeTextfield: UITextField!
     
     @IBAction func confirmButton(_ sender: UIButton) {
-        
+        willCheckPasscode(passcode: passcodeTextfield.text!) {
+        }
     }
     
     var confirmPasscodeText : String = "Please enter your current passcode."
@@ -25,11 +26,12 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         styleDisplayLabel()
+        styleButton()
         setTextDelegateAndStlying()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,26 +57,40 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
         // textfield entry styling
         self.passcodeTextfield.textAlignment = NSTextAlignment.center
         self.passcodeTextfield.maxLength = 4
-    
+        
         // secure entry
         self.passcodeTextfield.isSecureTextEntry = true
         self.passcodeTextfield.placeholder = "Please enter passcode"
         self.passcodeTextfield.adjustsFontSizeToFitWidth = true
         self.passcodeTextfield.minimumFontSize = 10.0
         self.passcodeTextfield.tintColor = UIColor.clear
+        self.passcodeTextfield.textFieldShouldBeginEditing()
         
     }
     
     func willCheckPasscode(passcode : String, completion: @escaping () -> ()) {
-        // check functionality
+        let currentPasscode = (UserDefaults.standard.value(forKey: "passcode") as? String)
+        print(currentPasscode)
+        
+        if currentPasscode == passcode {
+            print("success")
+        } else {
+            print("failure and pop alert")
+            
+        }
+        completion()
     }
     
     func didSelectOffKeyboard() {
         // dismiss keyboard functionality
     }
     
+    func styleButton() {
+        self.confirmButton.layer.cornerRadius = 2.5
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true) //This will hide the keyboard
     }
-     
+    
 }

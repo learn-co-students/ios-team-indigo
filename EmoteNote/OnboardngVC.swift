@@ -54,6 +54,8 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK : TO-DO -> please refactor this button styling into one universal function, as it is used several times
+    
     func setButton() {
         self.saveButton.layer.cornerRadius = 2.5
     }
@@ -92,6 +94,7 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         self.passcodeTextfield.placeholder = "Please enter passcode"
         self.passcodeTextfield.adjustsFontSizeToFitWidth = true
         self.passcodeTextfield.minimumFontSize = 10.0
+        self.passcodeTextfield.tintColor = UIColor.clear
         
     }
     
