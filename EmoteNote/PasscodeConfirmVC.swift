@@ -80,6 +80,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
         
         if currentPasscode == passcode {
             print("success")
+            completion()
         } else {
             print("failure and pop alert")
             // This should go in the completion of the jiggle animation
@@ -87,10 +88,8 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
                 print("completion fired")
                 self.passcodeTextfield.text?.removeAll()
             })
-            
-            
         }
-        completion()
+        
     }
     
     func didSelectOffKeyboard() {
