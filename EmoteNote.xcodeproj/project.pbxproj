@@ -10,6 +10,7 @@
 		BE0530F51EB12A3600C50DE4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */; };
 		BE0530FC1EB132E700C50DE4 /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */; };
 		BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5F91EAEA45C007A6676 /* MapVC.swift */; };
+		BE083E481ECE2A6300684884 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE083E471ECE2A6300684884 /* ShakeAnimation.swift */; };
 		BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24AC221EAE893A000D34B0 /* MapPin.swift */; };
 		BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24AC241EAE8D6D000D34B0 /* MapKit.framework */; };
 		BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4482241EAA5A9800126402 /* NoteContentVC.swift */; };
@@ -99,6 +100,7 @@
 		BE0530F41EB12A3600C50DE4 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
 		BE07C5F91EAEA45C007A6676 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		BE083E471ECE2A6300684884 /* ShakeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 		BE24AC221EAE893A000D34B0 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		BE24AC241EAE8D6D000D34B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BE4482241EAA5A9800126402 /* NoteContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteContentVC.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */,
 				BE9DE6231EA53917004E05CE /* Credentials .swift */,
 				BEE5CEDD1ECD5BD9001E0598 /* NumericalKeyboardTopLayer.swift */,
+				BE083E471ECE2A6300684884 /* ShakeAnimation.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				BE6DEF1E1EB27C8C00BEBF28 /* maxLengthSet.swift in Sources */,
 				BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */,
 				BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */,
+				BE083E481ECE2A6300684884 /* ShakeAnimation.swift in Sources */,
 				BE9DE5EB1EA53311004E05CE /* EmoteNote.xcdatamodeld in Sources */,
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
 				BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */,

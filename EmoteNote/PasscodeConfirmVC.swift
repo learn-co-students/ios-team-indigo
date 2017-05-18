@@ -82,10 +82,12 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
             print("success")
         } else {
             print("failure and pop alert")
-            print("clearing current content")
-            
             // This should go in the completion of the jiggle animation
-            passcodeTextfield.text?.removeAll()
+            passcodeTextfield.shake(completion: {
+                print("completion fired")
+                self.passcodeTextfield.text?.removeAll()
+            })
+            
             
         }
         completion()
