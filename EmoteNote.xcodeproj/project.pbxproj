@@ -13,6 +13,7 @@
 		BE083E481ECE2A6300684884 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE083E471ECE2A6300684884 /* ShakeAnimation.swift */; };
 		BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24AC221EAE893A000D34B0 /* MapPin.swift */; };
 		BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24AC241EAE8D6D000D34B0 /* MapKit.framework */; };
+		BE2AF5391EE0CF8B00484FD1 /* PasscodeChangeVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AF5381EE0CF8B00484FD1 /* PasscodeChangeVC2.swift */; };
 		BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4482241EAA5A9800126402 /* NoteContentVC.swift */; };
 		BE4D2B8D1EBA5FF50094115B /* PasscodeChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4D2B8C1EBA5FF50094115B /* PasscodeChangeVC.swift */; };
 		BE4E44C91EA7ABAD0013FC6B /* NoteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */; };
@@ -103,6 +104,7 @@
 		BE083E471ECE2A6300684884 /* ShakeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 		BE24AC221EAE893A000D34B0 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		BE24AC241EAE8D6D000D34B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BE2AF5381EE0CF8B00484FD1 /* PasscodeChangeVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeChangeVC2.swift; sourceTree = "<group>"; };
 		BE4482241EAA5A9800126402 /* NoteContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteContentVC.swift; sourceTree = "<group>"; };
 		BE4D2B8C1EBA5FF50094115B /* PasscodeChangeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeChangeVC.swift; sourceTree = "<group>"; };
 		BE4E44C81EA7ABAD0013FC6B /* NoteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVC.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				BE6DEF1B1EB26A5700BEBF28 /* OnboardngVC.swift */,
 				BE4D2B8C1EBA5FF50094115B /* PasscodeChangeVC.swift */,
 				BEE5CEDB1ECD0368001E0598 /* PasscodeConfirmVC.swift */,
+				BE2AF5381EE0CF8B00484FD1 /* PasscodeChangeVC2.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				BEE5CEDE1ECD5BD9001E0598 /* NumericalKeyboardTopLayer.swift in Sources */,
 				BE9DE6221EA537B3004E05CE /* EmotionApi.swift in Sources */,
 				BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */,
+				BE2AF5391EE0CF8B00484FD1 /* PasscodeChangeVC2.swift in Sources */,
 				BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */,
 				BE0530FC1EB132E700C50DE4 /* DoubleConverter.swift in Sources */,
 				BE8F76DE1EC241A50099BE07 /* Animations.swift in Sources */,
