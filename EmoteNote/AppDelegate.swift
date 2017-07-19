@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc :UIViewController
+        var vc : UIViewController
         
         if (UserDefaults.standard.value(forKey: "passcode") as? String) == nil {
             // show onboarding view controller
@@ -43,10 +43,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        print("app entered background")
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc : UIViewController
+        
+        vc = storyboard.instantiateViewController(withIdentifier: "IdleLockVC")
+        
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        print("app entered foreground")
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

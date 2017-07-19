@@ -82,6 +82,21 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
     func setDefaults() {
         // should have a completion handler
         UserDefaults.standard.set(pcEntryField.text, forKey: "passcode")
+        savedAlert()
         print("saving the new password")
+        
+        
+    }
+    
+    func savedAlert() {
+        let alert = UIAlertController(title: "Passcode Saveed",
+                                      message: "Saved",
+                                      preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        return
     }
 }

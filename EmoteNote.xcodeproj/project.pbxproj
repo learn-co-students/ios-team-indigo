@@ -11,6 +11,7 @@
 		BE0530FC1EB132E700C50DE4 /* DoubleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */; };
 		BE07C5FA1EAEA45C007A6676 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5F91EAEA45C007A6676 /* MapVC.swift */; };
 		BE083E481ECE2A6300684884 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE083E471ECE2A6300684884 /* ShakeAnimation.swift */; };
+		BE0866031F1FF9DB00B0AE1B /* IdlePasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0866021F1FF9DB00B0AE1B /* IdlePasscodeViewController.swift */; };
 		BE24AC231EAE893A000D34B0 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24AC221EAE893A000D34B0 /* MapPin.swift */; };
 		BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE24AC241EAE8D6D000D34B0 /* MapKit.framework */; };
 		BE2AF5391EE0CF8B00484FD1 /* PasscodeChangeVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AF5381EE0CF8B00484FD1 /* PasscodeChangeVC2.swift */; };
@@ -46,6 +47,7 @@
 		BEA5FE6E1EAA86E2004704D0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; };
 		BEA5FE6F1EAA86E2004704D0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5FE6D1EAA86E2004704D0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEB3E06E1EA918D9008345FE /* NoteTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */; };
+		BEB5E1461F1D6E7800153835 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB5E1451F1D6E7800153835 /* MessageUI.framework */; };
 		BED1FCB21EB0FBC600E451ED /* Cabin-Bold.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367571EAA66160077D080 /* Cabin-Bold.otf */; };
 		BED1FCB31EB0FBC600E451ED /* Cabin-BoldItalic.otf in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEA367581EAA66160077D080 /* Cabin-BoldItalic.otf */; };
 		BED7F3531EA7D7F300221251 /* NoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7F3521EA7D7F300221251 /* NoteDataStore.swift */; };
@@ -102,6 +104,7 @@
 		BE0530FB1EB132E700C50DE4 /* DoubleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleConverter.swift; sourceTree = "<group>"; };
 		BE07C5F91EAEA45C007A6676 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		BE083E471ECE2A6300684884 /* ShakeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
+		BE0866021F1FF9DB00B0AE1B /* IdlePasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdlePasscodeViewController.swift; sourceTree = "<group>"; };
 		BE24AC221EAE893A000D34B0 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		BE24AC241EAE8D6D000D34B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BE2AF5381EE0CF8B00484FD1 /* PasscodeChangeVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeChangeVC2.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 		BEA3675E1EAA66160077D080 /* Cabin-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		BEA5FE6D1EAA86E2004704D0 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		BEB3E06D1EA918D9008345FE /* NoteTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableVCell.swift; sourceTree = "<group>"; };
+		BEB5E1451F1D6E7800153835 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BED7F3521EA7D7F300221251 /* NoteDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataStore.swift; sourceTree = "<group>"; };
 		BEE5CEDB1ECD0368001E0598 /* PasscodeConfirmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeConfirmVC.swift; sourceTree = "<group>"; };
 		BEE5CEDD1ECD5BD9001E0598 /* NumericalKeyboardTopLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericalKeyboardTopLayer.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB5E1461F1D6E7800153835 /* MessageUI.framework in Frameworks */,
 				BEA5FE6E1EAA86E2004704D0 /* Charts.framework in Frameworks */,
 				BE9DE61B1EA5362F004E05CE /* NaturalLanguageUnderstandingV1.framework in Frameworks */,
 				BE24AC251EAE8D6D000D34B0 /* MapKit.framework in Frameworks */,
@@ -246,6 +251,7 @@
 		BE9DE6131EA5345E004E05CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEB5E1451F1D6E7800153835 /* MessageUI.framework */,
 				BE24AC241EAE8D6D000D34B0 /* MapKit.framework */,
 				BE9DE6141EA5345E004E05CE /* NaturalLanguageUnderstandingV1.framework */,
 			);
@@ -265,6 +271,7 @@
 				BE4D2B8C1EBA5FF50094115B /* PasscodeChangeVC.swift */,
 				BEE5CEDB1ECD0368001E0598 /* PasscodeConfirmVC.swift */,
 				BE2AF5381EE0CF8B00484FD1 /* PasscodeChangeVC2.swift */,
+				BE0866021F1FF9DB00B0AE1B /* IdlePasscodeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +392,7 @@
 				TargetAttributes = {
 					BE9DE5DE1EA53311004E05CE = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = Y865YRG8HB;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -474,6 +482,7 @@
 				BE9DE5E31EA53311004E05CE /* AppDelegate.swift in Sources */,
 				BE4482251EAA5A9800126402 /* NoteContentVC.swift in Sources */,
 				BE9DE6241EA53917004E05CE /* Credentials .swift in Sources */,
+				BE0866031F1FF9DB00B0AE1B /* IdlePasscodeViewController.swift in Sources */,
 				BE4D2B8D1EBA5FF50094115B /* PasscodeChangeVC.swift in Sources */,
 				BE9DE62C1EA6657D004E05CE /* ColorPallet.swift in Sources */,
 				BEE5CEDE1ECD5BD9001E0598 /* NumericalKeyboardTopLayer.swift in Sources */,
@@ -637,6 +646,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y865YRG8HB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -645,6 +656,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rasmussen.EmoteNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -653,6 +665,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y865YRG8HB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -661,6 +675,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rasmussen.EmoteNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

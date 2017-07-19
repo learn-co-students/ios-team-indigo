@@ -20,6 +20,8 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func confirmButton(_ sender: UIButton) {
         willCheckPasscode(passcode: passcodeTextfield.text!) {
+            // show passcode change vc 2
+            
         }
     }
     
@@ -29,7 +31,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         styleDisplayLabel()
         styleButton()
-        setTextDelegateAndStlying()
+        setTextDelegateAndStyling()
         
         // Do any additional setup after loading the view.
     }
@@ -50,7 +52,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
         self.passcodeLabel.textAlignment = NSTextAlignment.center
     }
     
-    func setTextDelegateAndStlying() {
+    func setTextDelegateAndStyling() {
         // sets keyboard type to numbers
         
         // clear passcode textfield on editing 

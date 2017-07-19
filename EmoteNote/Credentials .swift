@@ -12,12 +12,19 @@ import Foundation
 class Constants {
     
     static let url : String =  "https://gateway.watsonplatform.net/natural-language-understanding/api"
-    static let userID : String =  "7eb9d4d2-5c0e-4458-af11-1789ff7def36"
-    static let passwordID : String = "BiW5qZvGjLjY"
-    static let versionDate : String = "2017-04-17" // use today's date for the most recent version (format "yyyy-mm-dd")
+    static let userID : String =  "5f99154c-2844-4d01-9b74-6dae23c112c5"
+    static let passwordID : String = "NiodV5ClHxXU"
+    static let versionDate : String = getCurrentDate(date: Date()) // use today's date for the most recent version (format "yyyy-mm-dd")
     
+    
+    class func getCurrentDate(date : Date) -> String {
+        let date = date as NSDate
+        let currentDateFormatter = DateFormatter()
+        currentDateFormatter.dateFormat = "yyyy-MM-dd" // "dd MM yyyy"
+        let stringDate = currentDateFormatter.string(from: date as Date)
+        
+        return stringDate
+        
+    }
 }
-
-
-
 

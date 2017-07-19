@@ -66,8 +66,12 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         print("text view was clicked")
-        self.noteView.text = ""
-        self.noteView.textColor = UIColor.black
+        // only clears text once; at the beginning of edits
+        if self.noteView.text == "please type how you are feeling..." {
+            self.noteView.text = ""
+            self.noteView.textColor = UIColor.black
+        }
+        
         // TODO : correct text alignment spacing bug
     }
     
@@ -113,7 +117,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         
-        // Ask for Authorisation from the User.
+        // Ask for Authorization from the User.
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
@@ -121,6 +125,10 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     
     func styleView() {
         self.view.backgroundColor = ColorPallet.cellBackgroundColor
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) //This will hide the keyboard
     }
     
     

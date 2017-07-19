@@ -8,10 +8,13 @@
 
 import UIKit
 import CoreData
+import MessageUI
 
-class SettingsVC: UIViewController {
+class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     let store = NoteDataStore.sharedInstance
+    
+    let feedbackEmail : String = "leahyjwilliam@gmail.com"
     
     @IBAction func clearButton(_ sender: Any) {
         didClickDelete()
@@ -23,8 +26,11 @@ class SettingsVC: UIViewController {
     }
     @IBOutlet weak var resetButton: UIButton!
     
-
+    @IBOutlet weak var feedbackButton: UIButton!
     
+    @IBAction func feedbackButton(_ sender: UIButton) {
+        sendEmail()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +72,30 @@ class SettingsVC: UIViewController {
     func styleResetButton() {
         self.clearButton.backgroundColor = ColorPallet.saveButtonColor
         self.clearButton.layer.cornerRadius = 2.5
+    }
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self // throws error
+            mail.setToRecipients(["leahyjwilliam@gmail.com"])
+            mail.setSubject("EmoteNote Feedback")
+            mail.setMessageBody("Feedback:", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+            print("could not send email correctly")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
+    func styleFeedbackButton() {
+        self.feedbackButton.backgroundColor = ColorPallet.saveButtonColor
+        self.feedbackButton.layer.cornerRadius = 2.5
     }
     
     

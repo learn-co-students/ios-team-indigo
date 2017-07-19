@@ -2,23 +2,23 @@
   "commitish" : "v3.0.2",
   "iOS" : [
     {
-      "hash" : "eca5f5e7b7b426f92924f74a6fa73f0531ff622e5eedbcf8446d163eaf0de387",
+      "hash" : "041aeead35ad024d32570fed44da71d5493fac615893fb5925dc226a67ae3cd3",
       "name" : "Charts"
     }
   ],
-  "xcodeVersion" : "Xcode 8.3\nBuild version 8E162",
+  "xcodeVersion" : "Xcode 8.3.3\nBuild version 8E3004b",
   "watchOS" : [
 
   ],
   "tvOS" : [
     {
-      "hash" : "8a64d586344daa20a1fe5aad28a3ca9535667d2a406a0f0fc2b35e34be301584",
+      "hash" : "812ace5ecd1c3e304b5a4d6693a5d7fd5b3f7a5071dcddacc5567b905cbf7384",
       "name" : "Charts"
     }
   ],
   "Mac" : [
     {
-      "hash" : "35bb17295e38cb3148895f58d00c0311b8d524268e4e06941e70cc6dfa4c99d9",
+      "hash" : "ae82b5dca7bc4ef535ceb683ba1f4611b23fc1380dcd0865f6701762b46dbe09",
       "name" : "Charts"
     }
   ]
