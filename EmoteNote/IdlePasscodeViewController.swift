@@ -18,6 +18,7 @@ class IdlePasscodeViewController: UIViewController, UITextFieldDelegate {
     @IBAction func enterButton(_ sender: UIButton) {
         willCheckPasscode(passcode: passcodeTextEntry.text!) { 
             print("passcode is correct")
+
         }
     }
 
@@ -76,5 +77,4 @@ class IdlePasscodeViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-
 }

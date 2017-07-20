@@ -40,7 +40,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4E-C0-Sd7">
-                                <rect key="frame" x="190.33333333333334" y="635" width="35" height="33"/>
+                                <rect key="frame" x="189.66666666666666" y="635" width="35" height="33"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -529,10 +529,10 @@
             </objects>
             <point key="canvasLocation" x="1417" y="35"/>
         </scene>
-        <!--IdleLockVC-->
+        <!--IdlePasscodeVC-->
         <scene sceneID="ruB-mH-fc3">
             <objects>
-                <viewController storyboardIdentifier="IdleLockVC" title="IdleLockVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="COX-Te-kmK" customClass="IdlePasscodeViewController" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdlePasscodeVC" title="IdlePasscodeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="COX-Te-kmK" customClass="IdlePasscodeViewController" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AjV-a4-hIE"/>
                         <viewControllerLayoutGuide type="bottom" id="3V6-lG-PFc"/>
