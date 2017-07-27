@@ -14,6 +14,8 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     let store = NoteDataStore.sharedInstance
     
+    var gradientLayer : CAGradientLayer!
+    
     let feedbackEmail : String = "leahyjwilliam@gmail.com"
     
     @IBAction func clearButton(_ sender: Any) {
@@ -36,6 +38,8 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         super.viewDidLoad()
         styleClearButton()
         styleResetButton()
+        styleFeedbackButton()
+        createGradientLayer()
         
         // Do any additional setup after loading the view.
     }
@@ -64,14 +68,19 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     func styleClearButton() {
-        self.clearButton.backgroundColor = ColorPallet.saveButtonColor
+        self.clearButton.backgroundColor = UIColor(white: 1, alpha: 0.50)
         self.clearButton.layer.cornerRadius = 2.5
     }
     
     
     func styleResetButton() {
-        self.clearButton.backgroundColor = ColorPallet.saveButtonColor
-        self.clearButton.layer.cornerRadius = 2.5
+        self.resetButton.backgroundColor = UIColor(white: 1, alpha: 0.50)
+        self.resetButton.layer.cornerRadius = 2.5
+    }
+    
+    func styleFeedbackButton() {
+        self.feedbackButton.backgroundColor = UIColor(white: 1, alpha: 0.50)
+        self.feedbackButton.layer.cornerRadius = 2.5
     }
     
     func sendEmail() {
@@ -93,12 +102,22 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true)
     }
     
-    func styleFeedbackButton() {
-        self.feedbackButton.backgroundColor = ColorPallet.saveButtonColor
-        self.feedbackButton.layer.cornerRadius = 2.5
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
-    
-    
     
     
 }
