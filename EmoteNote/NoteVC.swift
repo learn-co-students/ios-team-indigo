@@ -66,7 +66,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         
         let content = self.noteView.text
         if (content?.isEmpty)! {
-            self.noteView.text = "please type how you are feeling... (Min. 15 characters)"
+            self.noteView.text = "Please type how you are feeling... (Min. 15 characters)"
             self.noteView.textColor = UIColor.gray
         }
     }
@@ -74,12 +74,19 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         print("text view was clicked")
         // only clears text once; at the beginning of edits
-        if self.noteView.text == "please type how you are feeling... (Min. 15 characters)" {
+        if self.noteView.text == "Please type how you are feeling... (Min. 15 characters)" {
             self.noteView.text = ""
             self.noteView.textColor = UIColor.black
         }
         
         // TODO : correct text alignment spacing bug
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if self.noteView.text.isEmpty || self.noteView.text == "Please type how you are feeling... (Min. 15 characters)" {
+            self.noteView.text = "Please type how you are feeling... (Min. 15 characters)"
+            self.noteView.textColor = UIColor.gray
+        }
     }
     
     func setBackgroundColor() {
@@ -109,17 +116,17 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     }
     
     func styleSaveButton() {
-        self.saveNoteButton.backgroundColor = ColorPallet.saveButtonColor
+        self.saveNoteButton.backgroundColor = UIColor(white: 1, alpha: 0.60)
         self.saveNoteButton.layer.cornerRadius = 2.5
         self.saveNoteButton.widthAnchor.constraint(equalTo: noteView.widthAnchor).isActive = true
-        self.saveNoteButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        self.saveNoteButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
     
     func styleCancelButtonI() {
-        self.cancelButton.backgroundColor = ColorPallet.saveButtonColor
+        self.cancelButton.backgroundColor = UIColor(white: 1, alpha: 0.60)
         self.cancelButton.layer.cornerRadius = 2.5
         self.cancelButton.widthAnchor.constraint(equalTo: noteView.widthAnchor).isActive = true
-        self.cancelButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        self.cancelButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
     
     func emptyAlert() {
