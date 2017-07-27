@@ -18,6 +18,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let store = NoteDataStore.sharedInstance
     
+    var gradientLayer: CAGradientLayer!
+    
     var notes : [Note] = []
     
     var pins : [MapPin] = []
@@ -50,6 +52,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         createNoteArray()
         createPins()
         populatePins(pinArray: pins)
+        
+        createGradientLayer()
     }
     
     override func didReceiveMemoryWarning() {
@@ -106,6 +110,23 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+    }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "myAnnotation") as? MKPinAnnotationView
         
@@ -141,10 +162,20 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     // styles map view
     func styleMapView() {
-        self.mapView.layer.cornerRadius = 2.5
+        // self.mapView.layer.cornerRadius = 2.5
         
         // TODO : add blur to edge of map
+        let blurLayer = CAGradientLayer()
+        blurLayer.frame = mapView.bounds
+        blurLayer.shadowRadius = 7.5
+        blurLayer.shadowOffset = CGSize.zero
         
+        let roundedRect = mapView.bounds.insetBy(dx: 12.5, dy: 12.5)
+        blurLayer.shadowPath = CGPath(roundedRect: roundedRect , cornerWidth: 15, cornerHeight: 15, transform: nil)
+        blurLayer.shadowOpacity = 1
+        blurLayer.shadowColor = UIColor.white.cgColor
+        
+        mapView.layer.mask = blurLayer
     }
     
     
