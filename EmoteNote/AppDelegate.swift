@@ -54,19 +54,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         
+        print("app entered foreground")
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         
+        // directs to lock screen if the app neters the background
         
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        var vc : UIViewController
-//        
-//        vc = storyboard.instantiateViewController(withIdentifier: "IdlePasscodeVC")
-//        
-//        self.window?.rootViewController = vc
-//        self.window?.makeKeyAndVisible()
-//        print("app entered foreground")
-//        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc : UIViewController
+        
+        vc = storyboard.instantiateViewController(withIdentifier: "idleLockVC")
+        
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+
+
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

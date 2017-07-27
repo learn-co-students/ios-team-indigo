@@ -10,10 +10,14 @@ import UIKit
 import MapKit
 import CoreLocation
 
+// clear - remove comments before shipping
+
 class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     
     let store = NoteDataStore.sharedInstance
     let locationManager = CLLocationManager()
+    
+    var gradientLayer: CAGradientLayer!
     
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveNoteButton: UIButton!
@@ -22,11 +26,11 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         self.dismissNoteVC()
     }
     
-    
     @IBAction func saveNoteButton(_ sender: UIButton) {
-        if noteView.text.isEmpty || noteView.text == "please type how you are feeling..." {
+        if noteView.text.isEmpty || noteView.text == "please type how you are feeling... (Min. 15 characters)" {
             emptyAlert()
         } else {
+            self.saveNoteButton.isEnabled = false
             store.saveNote(text: noteView.text,
                            latitude: (locationManager.location?.coordinate.latitude)!,
                            longitude: (locationManager.location?.coordinate.longitude)!,
@@ -36,10 +40,12 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         }
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleView()
-        setBackgroundColor()
+        createGradientLayer()
+        // setBackgroundColor()
         setNoteConstraints()
         styleSaveButton()
         styleCancelButtonI()
@@ -47,10 +53,12 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     func setNoteConstraints() {
         self.noteView.isEditable = true
@@ -59,7 +67,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         
         let content = self.noteView.text
         if (content?.isEmpty)! {
-            self.noteView.text = "please type how you are feeling..."
+            self.noteView.text = "please type how you are feeling... (Min. 15 characters)"
             self.noteView.textColor = UIColor.gray
         }
     }
@@ -67,7 +75,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         print("text view was clicked")
         // only clears text once; at the beginning of edits
-        if self.noteView.text == "please type how you are feeling..." {
+        if self.noteView.text == "please type how you are feeling... (Min. 15 characters)" {
             self.noteView.text = ""
             self.noteView.textColor = UIColor.black
         }
@@ -82,6 +90,23 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     func dismissNoteVC() {
         self.dismiss(animated: true, completion: nil)
         print("dismissed note view")
+    }
+    
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+            print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+            print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    
     }
     
     func styleSaveButton() {
@@ -121,10 +146,6 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
-    }
-    
-    func styleView() {
-        self.view.backgroundColor = ColorPallet.cellBackgroundColor
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -14,6 +14,7 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
     // TODO : animate text appearing > "pops"
     
     var isSecureTextEnabled : Bool!
+    var gradientLayer: CAGradientLayer!
     
     @IBOutlet weak var introTextLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
@@ -42,7 +43,7 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         self.showButton.setTitle("Show", for: [])
     
         animateTextSlowEaseIn(textLabel: introTextLabel, duration: 2.0, delay: 0.5)
-        setTextDelegateAndStlying()
+        setTextDelegateAndStlying(textEntry: self.passcodeTextfield)
         setIntroText()
         setButton()
         
@@ -80,23 +81,7 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         
     }
     
-    func setTextDelegateAndStlying() {
-        // sets keyboard type to numbers
-        print("i am preparing a keyboard")
-        passcodeTextfield.delegate = self
-        passcodeTextfield.keyboardType = UIKeyboardType.numberPad
-        
-        // textfield entry styling
-        self.passcodeTextfield.textAlignment = NSTextAlignment.center
-        self.passcodeTextfield.maxLength = 4
-        // secure entry
-        self.passcodeTextfield.isSecureTextEntry = true
-        self.passcodeTextfield.placeholder = "Please enter passcode"
-        self.passcodeTextfield.adjustsFontSizeToFitWidth = true
-        self.passcodeTextfield.minimumFontSize = 10.0
-        self.passcodeTextfield.tintColor = UIColor.clear
-        
-    }
+    
     
     func emptyAlert() {
         let alert = UIAlertController(title: "Passcode field empty",
@@ -108,6 +93,23 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         
         present(alert, animated: true, completion: nil)
         return
+    }
+    
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
     
     func setDefaults() {

@@ -8,18 +8,24 @@
 
 import UIKit
 
+// clear - remove comments before ship
 
 class NoteTableVC: UITableViewController {
     
     let store = NoteDataStore.sharedInstance
     
+    var gradientLayer : CAGradientLayer!
+    
     var reuseIdentifier : String = "noteIdentifier"
     let segueIdentifier : String = "noteShowSegue"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        createGradientLayer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +34,22 @@ class NoteTableVC: UITableViewController {
         
     }
     
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,13 +72,22 @@ class NoteTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! NoteTableViewCell
         let note = store.notes[indexPath.row]
         
+        // sets the color of the cells
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.125) // currently slightly opaque
+        
+        // sets the cell separator line with the tableview
+        tableView.separatorColor = UIColor.gray
+        
+        //
+        
+        // creates content for the tableview cell
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy" // "dd MM yyyy"
         if let strDate = note.date {
             let result = dateFormatter.string(from: strDate as Date)
             cell.dateLabel?.text = String(describing: result)
             cell.contentLabel?.text = note.content!
-            cell.setFont()
+            // cell.setFont()
             cell.setCircle(note: note)
         }
         return cell

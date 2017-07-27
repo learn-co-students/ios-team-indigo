@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// clear - remove comments before ship
+
 class NoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -16,10 +18,10 @@ class NoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var customCircle: UIView!
     
-    func setFont() {
-        self.contentView.backgroundColor = ColorPallet.cellBackgroundColor
-    }
-
+//    func setFont() {
+//        self.contentView.backgroundColor = UIColor.clear
+//     }
+    
     func setColorCircle(score : Double) -> UIColor {
         if score >= 0 {
             return UIColor(red: 190/225, green: 237/225, blue: (166/225), alpha: 1) // 171, 214, 175

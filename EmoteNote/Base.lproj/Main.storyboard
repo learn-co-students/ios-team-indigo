@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uVD-jk-6j0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="COX-Te-kmK">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,7 +40,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4E-C0-Sd7">
-                                <rect key="frame" x="189.66666666666666" y="635" width="35" height="33"/>
+                                <rect key="frame" x="190.33333333333334" y="635" width="35" height="33"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5e-1K-wE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4701.6000000000004" y="805.54722638680664"/>
+            <point key="canvasLocation" x="4298" y="1016"/>
         </scene>
         <!--Settings-->
         <scene sceneID="q1y-cB-bi6">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEt-fn-4YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7089.8550724637689" y="804.61956521739137"/>
+            <point key="canvasLocation" x="6476" y="1016"/>
         </scene>
         <!--Passcode ConfirmVC-->
         <scene sceneID="qCa-bR-LtA">
@@ -278,11 +278,12 @@
                         <outlet property="confirmButton" destination="dVc-nk-DpL" id="gmB-Ch-DJB"/>
                         <outlet property="passcodeLabel" destination="Axr-am-oS0" id="IZ9-3O-mEh"/>
                         <outlet property="passcodeTextfield" destination="B9H-PP-dPR" id="jyl-1H-ddz"/>
+                        <segue destination="EuD-H6-ceY" kind="presentation" identifier="changeSegue" id="dbs-SY-09d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0T0-lm-mAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7839" y="805"/>
+            <point key="canvasLocation" x="7325" y="1016"/>
         </scene>
         <!--Passcode ChangeVC2-->
         <scene sceneID="Ysc-JV-ryM">
@@ -338,11 +339,12 @@
                         <outlet property="pcEntryField" destination="y7T-cz-5CO" id="5ci-oW-gIL"/>
                         <outlet property="saveButton" destination="rz0-nf-cJY" id="zfC-M1-EsW"/>
                         <outlet property="textLabel" destination="1vK-39-CI9" id="2ZP-1J-cst"/>
+                        <segue destination="uVD-jk-6j0" kind="presentation" identifier="savedSegue" id="TUs-Ht-Abg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdU-Vl-SOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8571" y="805"/>
+            <point key="canvasLocation" x="8087" y="-718"/>
         </scene>
         <!--Note TableVC-->
         <scene sceneID="yvX-PU-A8k">
@@ -412,7 +414,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zqM-mz-Sc9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Table" id="82J-FA-N2c"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ynt-Nz-nRz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ynt-Nz-nRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -433,7 +435,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="h21-X2-ijn">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="zqM-mz-Sc9" kind="relationship" relationship="viewControllers" id="PnV-JT-3q9"/>
@@ -464,7 +467,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to EmoteNote!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-WK-zmm">
-                                <rect key="frame" x="133.33333333333337" y="83.666666666666686" width="148.66666666666663" height="17.333333333333329"/>
+                                <rect key="frame" x="134.33333333333337" y="83.666666666666686" width="148.66666666666663" height="17.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="14"/>
                                 <color key="textColor" red="0.29070021160803866" green="0.3003157383419689" blue="0.27509466658797371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -484,7 +487,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-D7-mYs">
-                                <rect key="frame" x="191" y="132" width="32" height="16.333333333333343"/>
+                                <rect key="frame" x="192" y="132" width="32" height="16.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -527,12 +530,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ID-0T-BbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="35"/>
+            <point key="canvasLocation" x="820" y="35"/>
         </scene>
         <!--IdlePasscodeVC-->
         <scene sceneID="ruB-mH-fc3">
             <objects>
-                <viewController storyboardIdentifier="IdlePasscodeVC" title="IdlePasscodeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="COX-Te-kmK" customClass="IdlePasscodeViewController" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="idleLockVC" title="IdlePasscodeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="COX-Te-kmK" customClass="IdlePasscodeViewController" customModule="EmoteNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AjV-a4-hIE"/>
                         <viewControllerLayoutGuide type="bottom" id="3V6-lG-PFc"/>
@@ -546,7 +549,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-OF-bEN">
-                                <rect key="frame" x="125" y="186" width="164" height="18"/>
+                                <rect key="frame" x="125" y="186" width="164" height="16.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="14"/>
                                 <color key="textColor" red="0.29070021159999998" green="0.30031573830000002" blue="0.27509466659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -572,34 +575,34 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98101522019999998" green="0.91589765670000001" blue="0.88866977079999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="thw-C0-h5y" firstAttribute="top" secondItem="AjV-a4-hIE" secondAttribute="bottom" constant="677" id="16y-5l-RpE"/>
-                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="3yA-Zy-ewl"/>
-                            <constraint firstItem="thw-C0-h5y" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" id="6gu-Sw-Sjh"/>
-                            <constraint firstItem="MOF-OF-bEN" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="N3d-4u-eAI"/>
-                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="153" id="P2Q-0T-a3Y"/>
-                            <constraint firstItem="RNC-QQ-1fe" firstAttribute="top" secondItem="MOF-OF-bEN" secondAttribute="bottom" constant="31" id="QT0-1W-7Mp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MOF-OF-bEN" secondAttribute="trailing" constant="105" id="SaB-Uz-SnQ"/>
-                            <constraint firstItem="thw-C0-h5y" firstAttribute="trailing" secondItem="6Gs-2I-w8P" secondAttribute="trailingMargin" id="U3Y-6W-jNj"/>
-                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="top" secondItem="RNC-QQ-1fe" secondAttribute="bottom" constant="64" id="U59-bY-K8l"/>
-                            <constraint firstItem="RNC-QQ-1fe" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="X2j-lU-1gP"/>
-                            <constraint firstItem="MOF-OF-bEN" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="105" id="ZB9-St-krI"/>
-                            <constraint firstItem="MOF-OF-bEN" firstAttribute="top" secondItem="AjV-a4-hIE" secondAttribute="bottom" constant="166" id="aIh-9k-5ha"/>
-                            <constraint firstItem="thw-C0-h5y" firstAttribute="top" secondItem="GDW-wQ-dNJ" secondAttribute="bottom" constant="338" id="aT0-7e-V0U"/>
-                            <constraint firstItem="3V6-lG-PFc" firstAttribute="top" secondItem="thw-C0-h5y" secondAttribute="bottom" constant="9" id="bSp-Al-BLj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RNC-QQ-1fe" secondAttribute="trailing" constant="97" id="dCd-8T-Qd2"/>
-                            <constraint firstItem="RNC-QQ-1fe" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="98" id="gii-pI-Ua6"/>
-                            <constraint firstItem="thw-C0-h5y" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="xkx-vM-NTV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GDW-wQ-dNJ" secondAttribute="trailing" constant="152" id="yBo-om-brl"/>
+                            <constraint firstItem="thw-C0-h5y" firstAttribute="top" secondItem="GDW-wQ-dNJ" secondAttribute="bottom" constant="338" id="1kI-sp-wlW"/>
+                            <constraint firstItem="thw-C0-h5y" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="2l8-U3-a3A"/>
+                            <constraint firstItem="RNC-QQ-1fe" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="3Vi-2Q-t4I"/>
+                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="4mR-09-KGB"/>
+                            <constraint firstItem="RNC-QQ-1fe" firstAttribute="top" secondItem="MOF-OF-bEN" secondAttribute="bottom" constant="32.670000000000002" id="56h-FB-QgZ"/>
+                            <constraint firstItem="3V6-lG-PFc" firstAttribute="top" secondItem="thw-C0-h5y" secondAttribute="bottom" constant="9" id="8ty-1d-Drl"/>
+                            <constraint firstItem="MOF-OF-bEN" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="9zv-E0-cJt"/>
+                            <constraint firstItem="MOF-OF-bEN" firstAttribute="top" secondItem="AjV-a4-hIE" secondAttribute="bottom" constant="166" id="J11-pM-2RP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GDW-wQ-dNJ" secondAttribute="trailing" constant="152" id="PRN-w9-F8Y"/>
+                            <constraint firstItem="thw-C0-h5y" firstAttribute="trailing" secondItem="6Gs-2I-w8P" secondAttribute="trailingMargin" id="Tpr-70-aWL"/>
+                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="top" secondItem="RNC-QQ-1fe" secondAttribute="bottom" constant="64" id="dMS-1q-Oln"/>
+                            <constraint firstItem="thw-C0-h5y" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" id="e1d-DZ-rwr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MOF-OF-bEN" secondAttribute="trailing" constant="105" id="h3r-YA-3UY"/>
+                            <constraint firstItem="RNC-QQ-1fe" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="98" id="hbC-19-wlq"/>
+                            <constraint firstItem="MOF-OF-bEN" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="105" id="hpQ-h3-bnc"/>
+                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="153" id="lTr-Mk-k39"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RNC-QQ-1fe" secondAttribute="trailing" constant="97" id="rZt-Xq-NrI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="enterButton" destination="GDW-wQ-dNJ" id="yrm-04-MA8"/>
                         <outlet property="passcodeTextEntry" destination="RNC-QQ-1fe" id="ef0-yO-Yp9"/>
+                        <segue destination="uVD-jk-6j0" kind="presentation" identifier="lockSegue" id="lRz-XN-bkA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnM-TH-KHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414.4927536231885" y="714.94565217391312"/>
+            <point key="canvasLocation" x="1599" y="491"/>
         </scene>
         <!--Map-->
         <scene sceneID="I0W-pv-EUu">
@@ -607,7 +610,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gz2-Zs-A1m" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="M42-uT-rG7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0x4-Rn-pKO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x4-Rn-pKO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -618,7 +621,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZd-w6-iRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3689" y="806"/>
+            <point key="canvasLocation" x="3687" y="1016"/>
         </scene>
         <!--Settings-->
         <scene sceneID="5wI-O8-9qp">
@@ -626,7 +629,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUe-AO-LXF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="231-rU-UgF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Dn-a9-Ef6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Dn-a9-Ef6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -637,10 +640,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R43-b3-hfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6215.1999999999998" y="805.54722638680664"/>
+            <point key="canvasLocation" x="5716" y="1016"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="TUs-Ht-Abg"/>
         <segue reference="9yc-Q7-JMg"/>
     </inferredMetricsTieBreakers>
 </document>

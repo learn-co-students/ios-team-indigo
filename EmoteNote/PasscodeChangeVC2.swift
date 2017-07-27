@@ -16,6 +16,7 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pcEntryField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func saveButton(_ sender: UIButton) {
+        resetPCSuite()
     }
     
     override func viewDidLoad() {
@@ -73,27 +74,37 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
         if self.pcEntryField.text == currentPasscode {
             print("password must be new")
         } else {
-            setDefaults()
-            print("i am now saving")
+            setDefaults(completion: {
+                self.savedAlert()
+                print("i am now saving")
+            })
+            
         }
     }
 
     
-    func setDefaults() {
+    func setDefaults(completion: @escaping () -> ()) {
         // should have a completion handler
         UserDefaults.standard.set(pcEntryField.text, forKey: "passcode")
-        savedAlert()
         print("saving the new password")
+        completion()
         
         
     }
     
+    func segueBack() {
+        self.performSegue(withIdentifier: "savedSegue", sender: self)
+    }
+    
     func savedAlert() {
-        let alert = UIAlertController(title: "Passcode Saveed",
+        let alert = UIAlertController(title: "Passcode Saved",
                                       message: "Saved",
                                       preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Dismiss", style: .default, handler: { action in
+            self.segueBack()
+            print("segueing back")
+        })
         alert.addAction(okAction)
         
         present(alert, animated: true, completion: nil)

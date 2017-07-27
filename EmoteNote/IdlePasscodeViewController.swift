@@ -18,14 +18,18 @@ class IdlePasscodeViewController: UIViewController, UITextFieldDelegate {
     @IBAction func enterButton(_ sender: UIButton) {
         willCheckPasscode(passcode: passcodeTextEntry.text!) { 
             print("passcode is correct")
+            
+            // Segue to the tableivew Controller 
+            self.performSegue(withIdentifier: "lockSegue", sender: self)
 
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextDelegateAndStlying()
-
+        setTextDelegateAndStlying(textEntry: self.passcodeTextEntry)
+        styleShowButton() 
+        createGradientLayer()
         // Do any additional setup after loading the view.
     }
 
@@ -34,35 +38,28 @@ class IdlePasscodeViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func createGradientLayer() {
-        gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        // selects colors used for gradient
-        
-        // adds gradient layer to view
-        self.view.layer.addSublayer(gradientLayer)
-    }
-    
-    func setTextDelegateAndStlying() {
+    func setTextDelegateAndStlying(textEntry : UITextField) {
         // sets keyboard type to numbers
         print("i am preparing a keyboard")
-        passcodeTextEntry.delegate = self
-        passcodeTextEntry.keyboardType = UIKeyboardType.numberPad
+        textEntry.delegate = self
+        textEntry.keyboardType = UIKeyboardType.numberPad
         
         // textfield entry styling
-        self.passcodeTextEntry.textAlignment = NSTextAlignment.center
-        self.passcodeTextEntry.maxLength = 4
+        textEntry.textAlignment = NSTextAlignment.center
+        textEntry.maxLength = 4
         // secure entry
-        self.passcodeTextEntry.isSecureTextEntry = true
-        self.passcodeTextEntry.placeholder = "Please enter passcode"
-        self.passcodeTextEntry.adjustsFontSizeToFitWidth = true
-        self.passcodeTextEntry.minimumFontSize = 10.0
-        self.passcodeTextEntry.tintColor = UIColor.clear
+        textEntry.isSecureTextEntry = true
+        textEntry.placeholder = "Please enter passcode"
+        textEntry.adjustsFontSizeToFitWidth = true
+        textEntry.minimumFontSize = 10.0
+        textEntry.tintColor = UIColor.clear
+        
+        
     }
     
     func willCheckPasscode(passcode : String, completion: @escaping () -> ()) {
         let currentPasscode = (UserDefaults.standard.value(forKey: "passcode") as? String)
-        print(currentPasscode)
+        print(currentPasscode ?? "There was no passcode to print")
         
         if currentPasscode == passcode {
             print("success")
@@ -76,5 +73,33 @@ class IdlePasscodeViewController: UIViewController, UITextFieldDelegate {
             })
         }
         
+    }
+    
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+    }
+
+    
+    func styleShowButton() {
+        self.enterButton.layer.cornerRadius = 2.5
+    }
+    
+    func present() {
+        print("calling present")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LockVC") as! IdlePasscodeViewController
+        self.present(vc, animated: true, completion: nil)
     }
 }

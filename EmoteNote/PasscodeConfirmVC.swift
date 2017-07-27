@@ -21,7 +21,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     @IBAction func confirmButton(_ sender: UIButton) {
         willCheckPasscode(passcode: passcodeTextfield.text!) {
             // show passcode change vc 2
-            
+        self.performSegue(withIdentifier: "changeSegue", sender: self)
         }
     }
     
@@ -78,7 +78,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     
     func willCheckPasscode(passcode : String, completion: @escaping () -> ()) {
         let currentPasscode = (UserDefaults.standard.value(forKey: "passcode") as? String)
-        print(currentPasscode)
+        print(currentPasscode ?? "There was no passcode to print")
         
         if currentPasscode == passcode {
             print("success")
