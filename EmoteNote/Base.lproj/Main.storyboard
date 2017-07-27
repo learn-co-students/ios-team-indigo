@@ -467,14 +467,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to EmoteNote!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-WK-zmm">
-                                <rect key="frame" x="133.33333333333337" y="83.666666666666686" width="148.66666666666663" height="17.333333333333329"/>
-                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="14"/>
+                                <rect key="frame" x="86" y="73" width="244" height="28"/>
+                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="23"/>
                                 <color key="textColor" red="0.29070021160803866" green="0.3003157383419689" blue="0.27509466658797371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdQ-Qi-9lp">
                                 <rect key="frame" x="173" y="343" width="69" height="30"/>
-                                <color key="backgroundColor" red="0.84961949481865284" green="0.66815394296728114" blue="0.67647641153909088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.70945910956716707" green="0.80729026433375384" blue="0.82166855569948183" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="hqp-rV-WHt"/>
                                 </constraints>
@@ -487,8 +487,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-D7-mYs">
-                                <rect key="frame" x="191" y="132" width="32" height="16.333333333333343"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
+                                <rect key="frame" x="188.33333333333334" y="132" width="39" height="20.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -548,21 +548,9 @@
                                 <rect key="frame" x="20" y="697" width="374" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-OF-bEN">
-                                <rect key="frame" x="125" y="186" width="164" height="16.333333333333343"/>
-                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="14"/>
-                                <color key="textColor" red="0.29070021159999998" green="0.30031573830000002" blue="0.27509466659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNC-QQ-1fe">
-                                <rect key="frame" x="118" y="235" width="179" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDW-wQ-dNJ">
-                                <rect key="frame" x="173" y="329" width="69" height="30"/>
-                                <color key="backgroundColor" red="0.84961949479999999" green="0.66815394299999997" blue="0.67647641150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="118" y="329" width="179" height="30"/>
+                                <color key="backgroundColor" red="0.97801184560800292" green="0.98635848443730567" blue="0.98414557459359764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="14"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -572,6 +560,21 @@
                                     <action selector="saveButton:" destination="uCb-Kp-iJt" eventType="touchUpInside" id="f5t-mR-OSv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-OF-bEN">
+                                <rect key="frame" x="97" y="222" width="221" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="5sG-24-1TQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                <color key="textColor" red="0.29070021159999998" green="0.30031573830000002" blue="0.27509466659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNC-QQ-1fe">
+                                <rect key="frame" x="118" y="271" width="179" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.98101522019999998" green="0.91589765670000001" blue="0.88866977079999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -582,15 +585,15 @@
                             <constraint firstItem="RNC-QQ-1fe" firstAttribute="top" secondItem="MOF-OF-bEN" secondAttribute="bottom" constant="32.670000000000002" id="56h-FB-QgZ"/>
                             <constraint firstItem="3V6-lG-PFc" firstAttribute="top" secondItem="thw-C0-h5y" secondAttribute="bottom" constant="9" id="8ty-1d-Drl"/>
                             <constraint firstItem="MOF-OF-bEN" firstAttribute="centerX" secondItem="6Gs-2I-w8P" secondAttribute="centerX" id="9zv-E0-cJt"/>
-                            <constraint firstItem="MOF-OF-bEN" firstAttribute="top" secondItem="AjV-a4-hIE" secondAttribute="bottom" constant="166" id="J11-pM-2RP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GDW-wQ-dNJ" secondAttribute="trailing" constant="152" id="PRN-w9-F8Y"/>
+                            <constraint firstItem="MOF-OF-bEN" firstAttribute="top" secondItem="AjV-a4-hIE" secondAttribute="bottom" constant="202" id="J11-pM-2RP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GDW-wQ-dNJ" secondAttribute="trailing" constant="97" id="PRN-w9-F8Y"/>
                             <constraint firstItem="thw-C0-h5y" firstAttribute="trailing" secondItem="6Gs-2I-w8P" secondAttribute="trailingMargin" id="Tpr-70-aWL"/>
-                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="top" secondItem="RNC-QQ-1fe" secondAttribute="bottom" constant="64" id="dMS-1q-Oln"/>
+                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="top" secondItem="RNC-QQ-1fe" secondAttribute="bottom" constant="28" id="dMS-1q-Oln"/>
                             <constraint firstItem="thw-C0-h5y" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" id="e1d-DZ-rwr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MOF-OF-bEN" secondAttribute="trailing" constant="105" id="h3r-YA-3UY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MOF-OF-bEN" secondAttribute="trailing" constant="76" id="h3r-YA-3UY"/>
                             <constraint firstItem="RNC-QQ-1fe" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="98" id="hbC-19-wlq"/>
-                            <constraint firstItem="MOF-OF-bEN" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="105" id="hpQ-h3-bnc"/>
-                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="153" id="lTr-Mk-k39"/>
+                            <constraint firstItem="MOF-OF-bEN" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="77" id="hpQ-h3-bnc"/>
+                            <constraint firstItem="GDW-wQ-dNJ" firstAttribute="leading" secondItem="6Gs-2I-w8P" secondAttribute="leadingMargin" constant="98" id="lTr-Mk-k39"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RNC-QQ-1fe" secondAttribute="trailing" constant="97" id="rZt-Xq-NrI"/>
                         </constraints>
                     </view>
@@ -644,7 +647,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TUs-Ht-Abg"/>
+        <segue reference="lRz-XN-bkA"/>
         <segue reference="9yc-Q7-JMg"/>
     </inferredMetricsTieBreakers>
 </document>

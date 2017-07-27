@@ -39,7 +39,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    // add zoom radius 
+    // add zoom radius
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -157,14 +157,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     // TODO : sets current zoom to within appropriate surrounding region
     func setZoom() {
-        let span = MKCoordinateSpanMake(0.050, 0.050)
+    //    let span = MKCoordinateSpanMake(0.050, 0.050)
     }
     
     // styles map view
     func styleMapView() {
         // self.mapView.layer.cornerRadius = 2.5
         
-        // TODO : add blur to edge of map
+        // adds blur to the edges of the map
         let blurLayer = CAGradientLayer()
         blurLayer.frame = mapView.bounds
         blurLayer.shadowRadius = 7.5

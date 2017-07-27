@@ -45,7 +45,6 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         createGradientLayer()
-        // setBackgroundColor()
         setNoteConstraints()
         styleSaveButton()
         styleCancelButtonI()

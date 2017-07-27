@@ -16,6 +16,7 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     let font = UIFont(name: "Cabin-Bold", size: 12)
     
     var selectedNote : Note!
+    var gradientLayer : CAGradientLayer!
     
     var emotionIndex = ["Anger", "Sadness", "Joy", "Fear", "Digust"]
     var emotionIndexValue : [Double] = []
@@ -26,6 +27,7 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createGradientLayer()
         emotionIndexValue = setEmotionIndexes()
         print(emotionIndexValue)
         setChartItem()
@@ -53,6 +55,8 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         noteContentTextView.isEditable = false
         noteContentTextView.layer.cornerRadius = 2.5
         noteContentTextView.isScrollEnabled = true
+        noteContentTextView.setContentOffset(CGPoint.zero, animated: false)
+        noteContentTextView.backgroundColor = UIColor.clear
     }
     
     func setColor() {
@@ -68,6 +72,24 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     
     func setChartItem() {
         barChartView.noDataTextColor = UIColor.red
+        barChartView.backgroundColor = UIColor.clear
+    }
+    
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
     
     func setEmotionIndexes() -> [Double] {
@@ -96,21 +118,21 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Emotion Index")
         let chartData = BarChartData(dataSet: chartDataSet)
         
-        var colorsArray: [UIColor] = []
+        // sets color of bars
+        let colorsArray: [UIColor] = [ColorPallet.angerColor, ColorPallet.sadnessColor, ColorPallet.joyColor, ColorPallet.fearColor, ColorPallet.disgustColor]
+        chartDataSet.colors = colorsArray // anger, sadness, joy, fear, disgust
         
+        // MARK : antiquated random color generator
         
-        // makes colors random by appending arc'd colors to the colors array > which are used to populate the color of the bars
-        // # makes the colors standard
-        for _ in 0..<dataPoints.count {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colorsArray.append(color)
-        }
+        //        for _ in 0..<dataPoints.count {
+        //            let red = Double(arc4random_uniform(256))
+        //            let green = Double(arc4random_uniform(256))
+        //            let blue = Double(arc4random_uniform(256))
+        //
+        //            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+        //            colorsArray.append(color)
+        //        }
         
-        chartDataSet.colors = colorsArray
         
         barChartView.data = chartData
         barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:emotionIndex)
