@@ -149,5 +149,4 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         return
     }
     
-    
 }

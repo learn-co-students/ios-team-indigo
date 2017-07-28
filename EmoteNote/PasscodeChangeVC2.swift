@@ -24,6 +24,8 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setLabel()
         setTextDelegateAndStlying()
+        styleSaveButton()
+        createGradientLayer()
         
         // Do any additional setup after loading the view.
     }
@@ -70,9 +72,17 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
         
     }
     
+    func styleSaveButton() {
+        self.saveButton.layer.cornerRadius = 2.5
+        self.saveButton.backgroundColor = UIColor.white
+    }
+    
     func resetPCSuite() {
         let currentPasscode = (UserDefaults.standard.value(forKey: "passcode") as? String)
         
+        if self.pcEntryField.text?.isEmpty == true {
+            emptyAlert()
+        }
         if self.pcEntryField.text == currentPasscode {
             print("password must be new")
         } else {
@@ -80,13 +90,11 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
                 self.savedAlert()
                 print("i am now saving")
             })
-            
         }
     }
     
     
     func setDefaults(completion: @escaping () -> ()) {
-        // should have a completion handler
         UserDefaults.standard.set(pcEntryField.text, forKey: "passcode")
         print("saving the new password")
         completion()
@@ -122,6 +130,18 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
             self.segueBack()
             print("segueing back")
         })
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        return
+    }
+    
+    func emptyAlert() {
+        let alert = UIAlertController(title: "Passcode field empty",
+                                      message: "Please enter a 4-digit passcode",
+                                      preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         
         present(alert, animated: true, completion: nil)
