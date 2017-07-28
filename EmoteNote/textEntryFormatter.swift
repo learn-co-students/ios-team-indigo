@@ -17,6 +17,7 @@ func setTextDelegateAndStlying(textEntry : UITextField) {
     // textfield entry styling
     textEntry.textAlignment = NSTextAlignment.center
     textEntry.maxLength = 4
+    
     // secure entry
     textEntry.isSecureTextEntry = true
     textEntry.placeholder = "Please enter passcode"

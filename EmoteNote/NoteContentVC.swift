@@ -31,7 +31,6 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         emotionIndexValue = setEmotionIndexes()
         print(emotionIndexValue)
         setChartItem()
-        setColor()
         setNoteViewConstraints()
         setNoteData()
         axisFormatDelegate = self
@@ -57,10 +56,6 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         noteContentTextView.isScrollEnabled = true
         noteContentTextView.setContentOffset(CGPoint.zero, animated: false)
         noteContentTextView.backgroundColor = UIColor.clear
-    }
-    
-    func setColor() {
-        noteContentTextView.backgroundColor = ColorPallet.noteBackgroundColor
     }
     
     // MARK : Need keyword content

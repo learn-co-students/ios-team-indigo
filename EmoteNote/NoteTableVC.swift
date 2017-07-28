@@ -82,7 +82,7 @@ class NoteTableVC: UITableViewController {
         
         // creates content for the tableview cell
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy" // "dd MM yyyy"
+        dateFormatter.dateFormat = "MM/dd/yyyy" // "dd MM yyyy"
         if let strDate = note.date {
             let result = dateFormatter.string(from: strDate as Date)
             cell.dateLabel?.text = String(describing: result)

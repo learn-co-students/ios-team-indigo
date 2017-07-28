@@ -435,6 +435,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ysk-yu-tr6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9dk-ib-Xi5">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="cbp-I0-rM3" kind="presentation" id="2OT-vB-oCh"/>
                             </connections>
@@ -449,7 +450,7 @@
         <scene sceneID="2cO-59-8Go">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zqM-mz-Sc9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notes" id="82J-FA-N2c"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="icons8-Speech Bubble-64" selectedImage="icons8-Speech Bubble-64" id="82J-FA-N2c"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ynt-Nz-nRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -469,11 +470,10 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uVD-jk-6j0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" itemPositioning="fill" id="h21-X2-ijn">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="h21-X2-ijn">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -511,8 +511,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-D7-mYs">
-                                <rect key="frame" x="188.33333333333334" y="132" width="39" height="20"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
+                                <rect key="frame" x="186.33333333333334" y="132" width="41.333333333333314" height="22"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -529,7 +529,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdQ-Qi-9lp">
                                 <rect key="frame" x="118" y="326" width="179" height="31"/>
-                                <color key="backgroundColor" red="0.70945910956716707" green="0.80729026433375384" blue="0.82166855569948183" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="179" id="hqp-rV-WHt"/>
                                 </constraints>
@@ -640,7 +640,7 @@
         <scene sceneID="I0W-pv-EUu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gz2-Zs-A1m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="M42-uT-rG7"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="icons8-Marker-64" selectedImage="icons8-Marker-64" id="M42-uT-rG7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0x4-Rn-pKO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -659,7 +659,7 @@
         <scene sceneID="5wI-O8-9qp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUe-AO-LXF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="231-rU-UgF"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-Menu-64" selectedImage="icons8-Menu-64" id="231-rU-UgF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Dn-a9-Ef6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -675,8 +675,13 @@
             <point key="canvasLocation" x="5716" y="1016"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Marker-64" width="32" height="32"/>
+        <image name="icons8-Menu-64" width="32" height="32"/>
+        <image name="icons8-Speech Bubble-64" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TUs-Ht-Abg"/>
+        <segue reference="nSD-4x-NzL"/>
         <segue reference="9yc-Q7-JMg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -105,7 +105,7 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self // throws error
-            mail.setToRecipients(["leahyjwilliam@gmail.com"])
+            mail.setToRecipients(["emotenotefeedback@gmail.com"])
             mail.setSubject("EmoteNote Feedback")
             mail.setMessageBody("Feedback:", isHTML: true)
             

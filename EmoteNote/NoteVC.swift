@@ -27,7 +27,7 @@ class NoteVC: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     }
     
     @IBAction func saveNoteButton(_ sender: UIButton) {
-        if noteView.text.isEmpty || noteView.text == "please type how you are feeling... (Min. 15 characters)" {
+        if noteView.text.isEmpty || noteView.text == "Please type how you are feeling... (Min. 15 characters)" {
             emptyAlert()
         } else {
             self.saveNoteButton.isEnabled = false

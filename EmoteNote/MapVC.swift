@@ -88,7 +88,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         for note in notes {
             let Cllocation = CLLocationCoordinate2DMake(note.latitude, note.longitude)
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd-MM-yyyy"
+            dateFormatter.dateFormat = "MM-dd-yyyy"
             
             if let strDate = note.date {
                 let result = dateFormatter.string(from: strDate as Date)
