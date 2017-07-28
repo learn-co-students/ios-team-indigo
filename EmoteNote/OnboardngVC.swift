@@ -41,7 +41,7 @@ class OnboardngVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         isSecureTextEnabled = true
         self.showButton.setTitle("Show", for: [])
-    
+        createGradientLayer()
         animateTextSlowEaseIn(textLabel: introTextLabel, duration: 2.0, delay: 0.5)
         setTextDelegateAndStlying(textEntry: self.passcodeTextfield)
         setIntroText()

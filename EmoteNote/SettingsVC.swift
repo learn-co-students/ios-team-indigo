@@ -34,11 +34,18 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         sendEmail()
     }
     
+    @IBOutlet weak var aboutButton: UIButton!
+    
+    @IBAction func aboutButton(_ sender: UIButton) {
+        aboutAlert()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         styleClearButton()
         styleResetButton()
         styleFeedbackButton()
+        styleAboutButton()
         createGradientLayer()
         
         // Do any additional setup after loading the view.
@@ -67,6 +74,12 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         present(refreshAlert, animated: true, completion: nil)
     }
     
+    func didClickAbout() {
+        
+    }
+    
+    // MARK : BUTTON STYLING
+    
     func styleClearButton() {
         self.clearButton.backgroundColor = UIColor(white: 1, alpha: 0.50)
         self.clearButton.layer.cornerRadius = 2.5
@@ -81,6 +94,11 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
     func styleFeedbackButton() {
         self.feedbackButton.backgroundColor = UIColor(white: 1, alpha: 0.50)
         self.feedbackButton.layer.cornerRadius = 2.5
+    }
+    
+    func styleAboutButton() {
+        self.aboutButton.backgroundColor = UIColor(white: 1, alpha: 0.50)
+        self.aboutButton.layer.cornerRadius = 2.5 
     }
     
     func sendEmail() {
@@ -117,6 +135,18 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
+    }
+    
+    func aboutAlert() {
+        let alert = UIAlertController(title: "About",
+                                      message: "Designed and Created by Will Leahy",
+                                      preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        return
     }
     
     

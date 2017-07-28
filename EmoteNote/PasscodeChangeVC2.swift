@@ -11,7 +11,8 @@ import UIKit
 class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
     
     let textString : String = "Please enter your new passcode"
-
+    var gradientLayer : CAGradientLayer!
+    
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var pcEntryField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
@@ -22,15 +23,16 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLabel()
-
+        setTextDelegateAndStlying()
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func setLabel() {
         
         // this needs to be refactored for redundancy
@@ -81,14 +83,29 @@ class PasscodeChangeVC2: UIViewController, UITextFieldDelegate {
             
         }
     }
-
+    
     
     func setDefaults(completion: @escaping () -> ()) {
         // should have a completion handler
         UserDefaults.standard.set(pcEntryField.text, forKey: "passcode")
         print("saving the new password")
         completion()
+    }
+    
+    func createGradientLayer() {
         
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
         
     }
     

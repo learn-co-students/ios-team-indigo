@@ -10,7 +10,7 @@ import UIKit
 
 class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     
-    // variable for deleting text if clicked again
+    var gradientLayer : CAGradientLayer!
     
     // outlets
     @IBOutlet weak var passcodeLabel: UILabel!
@@ -32,6 +32,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
         styleDisplayLabel()
         styleButton()
         setTextDelegateAndStyling()
+        createGradientLayer()
         
         // Do any additional setup after loading the view.
     }
@@ -76,6 +77,23 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    func createGradientLayer() {
+        
+        print("Creating sublayer")
+        
+        let colorOne = UIColor(hex: "83a4d4").cgColor
+        print(colorOne)
+        let colorTwo = UIColor(hex: "b6fbff").cgColor
+        print(colorTwo)
+        
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.colors = [colorOne, colorTwo]
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+    }
+    
     func willCheckPasscode(passcode : String, completion: @escaping () -> ()) {
         let currentPasscode = (UserDefaults.standard.value(forKey: "passcode") as? String)
         print(currentPasscode ?? "There was no passcode to print")
@@ -100,6 +118,7 @@ class PasscodeConfirmVC: UIViewController, UITextFieldDelegate {
     
     func styleButton() {
         self.confirmButton.layer.cornerRadius = 2.5
+        self.confirmButton.backgroundColor = UIColor.white
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
