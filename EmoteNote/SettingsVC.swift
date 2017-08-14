@@ -71,10 +71,6 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         present(refreshAlert, animated: true, completion: nil)
     }
     
-    func didClickAbout() {
-        
-    }
-    
     // MARK : BUTTON STYLING
     
     func styleClearButton() {
@@ -109,7 +105,7 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
             present(mail, animated: true)
         } else {
             // show failure alert
-            print("could not send email correctly")
+            print("Could not send email correctly")
         }
     }
     
@@ -137,6 +133,18 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
     func aboutAlert() {
         let alert = UIAlertController(title: "About",
                                       message: "Designed and Created by Will Leahy",
+                                      preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        return
+    }
+    
+    func couldNotSendEmailAlert() {
+        let alert = UIAlertController(title: "Error",
+                                      message: "Failed to send e-mail",
                                       preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
