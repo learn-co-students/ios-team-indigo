@@ -56,6 +56,7 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // deletes all user information (notes and all accompanying data, locations, etc.) from core data
     func didClickDelete() {
         let refreshAlert = UIAlertController(title: "Clear Data?", message: "All note data will be lost.", preferredStyle: UIAlertControllerStyle.alert)
         
@@ -94,6 +95,7 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         self.aboutButton.layer.cornerRadius = 2.5 
     }
     
+    // sends feedback email
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
@@ -113,8 +115,9 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true)
     }
     
+    // creates gradient layer
     func createGradientLayer() {
-        
+
         print("Creating sublayer")
         
         let colorOne = UIColor(hex: "83a4d4").cgColor
@@ -130,6 +133,7 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         
     }
     
+    // alert for about the application
     func aboutAlert() {
         let alert = UIAlertController(title: "About",
                                       message: "Designed and Created by Will Leahy",
@@ -142,6 +146,7 @@ class SettingsVC: UIViewController, MFMailComposeViewControllerDelegate {
         return
     }
     
+    // alert if email fails to send
     func couldNotSendEmailAlert() {
         let alert = UIAlertController(title: "Error",
                                       message: "Failed to send e-mail",

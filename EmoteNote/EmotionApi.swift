@@ -39,7 +39,6 @@ class EmotionAPI {
                 if let doc = res.document {
                     if let docEmotion = doc.emotion {
                         completion(.emotionScores(docEmotion))
-                        // let emotions = Emotions(res: docEmotion)
                         // you can grab each individual emotion
             
                     }

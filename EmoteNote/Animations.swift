@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// function that cuases any text to ease in slowly from transparent
 func animateTextSlowEaseIn(textLabel: UILabel, duration: Double, delay: Double) {
     UIView.animate(withDuration: duration, delay: delay, options: [.curveEaseOut], animations: {
         textLabel.alpha = 0

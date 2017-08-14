@@ -10,9 +10,8 @@ import Foundation
 import CoreLocation
 import MapKit
 
-
+// map pin class
 class MapPin : NSObject, MKAnnotation {
-    
     
     let identifier : String = "myAnnotation"
     let title : String?
