@@ -21,15 +21,4 @@ extension UITextField {
         
     }
     
-    // MARK : function wise implementation for creating top "border" to numerical keyboard when displayed
-    
-    //    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-    //
-    //        let separatorView = UIView(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 0.5))
-    //        separatorView.backgroundColor = UIColor.darkGray
-    //        textField.inputAccessoryView = separatorView
-    //
-    //        return true
-    //    }
-    
 }

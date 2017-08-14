@@ -17,8 +17,6 @@ class Constants {
     static let versionDate : String = getCurrentDate(date: Date())  // use today's date for the most recent version (format "yyyy-mm-dd")
     
     
-    //getCurrentDate(date: Date())
-    
     class func getCurrentDate(date : Date) -> String {
         let date = date as NSDate
         let currentDateFormatter = DateFormatter()

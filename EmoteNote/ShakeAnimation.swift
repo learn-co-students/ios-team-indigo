@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension UIView {
+    // extension that causes any uiview to shake (iphone passcode incorrect)
     func shake(completion: @escaping () -> ()) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)

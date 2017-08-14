@@ -40,7 +40,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4E-C0-Sd7">
-                                <rect key="frame" x="189.66666666666666" y="635" width="35" height="33"/>
+                                <rect key="frame" x="190" y="635" width="35" height="33"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.3884639533" green="0.4077700018" blue="0.44081930050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -272,19 +272,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9H-PP-dPR">
-                                <rect key="frame" x="118" y="273.33333333333331" width="179" height="30"/>
+                                <rect key="frame" x="118" y="272.33333333333331" width="179" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axr-am-oS0">
-                                <rect key="frame" x="189" y="230" width="37.666666666666657" height="20.666666666666657"/>
+                                <rect key="frame" x="188.66666666666666" y="230" width="37.666666666666686" height="19.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVc-nk-DpL">
-                                <rect key="frame" x="118" y="324.33333333333331" width="179" height="30"/>
+                                <rect key="frame" x="118" y="323.33333333333331" width="179" height="30"/>
                                 <color key="backgroundColor" red="0.86629695595854916" green="0.86629695595854916" blue="0.86629695595854916" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -338,7 +338,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vK-39-CI9">
-                                <rect key="frame" x="188" y="228" width="40" height="16"/>
+                                <rect key="frame" x="188.33333333333334" y="228" width="40" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="T8a-SV-h2I"/>
                                 </constraints>
@@ -399,25 +399,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="105.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WI1-OG-1j4">
-                                            <rect key="frame" x="294" y="43" width="73" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nm-81-BfX">
-                                            <rect key="frame" x="69" y="18" width="237" height="69"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <rect key="frame" x="68.5" y="17.5" width="237" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yb-8L-2dg">
-                                            <rect key="frame" x="28" y="40" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <rect key="frame" x="27.5" y="39.5" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WI1-OG-1j4">
+                                            <rect key="frame" x="308" y="41.5" width="53.5" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -444,7 +444,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xjg-SF-8gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4268" y="35.532233883058474"/>
+            <point key="canvasLocation" x="4266.666666666667" y="35.054347826086961"/>
         </scene>
         <!--Notes-->
         <scene sceneID="2cO-59-8Go">
@@ -452,7 +452,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zqM-mz-Sc9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notes" image="icons8-Speech Bubble-64" selectedImage="icons8-Speech Bubble-64" id="82J-FA-N2c"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ynt-Nz-nRz">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ynt-Nz-nRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -505,13 +507,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to EmoteNote!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-WK-zmm">
-                                <rect key="frame" x="80.666666666666686" y="71.666666666666686" width="254.66666666666663" height="29.333333333333329"/>
+                                <rect key="frame" x="80.333333333333343" y="71.666666666666686" width="254.66666666666666" height="29.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="24"/>
                                 <color key="textColor" red="0.29070021160803866" green="0.3003157383419689" blue="0.27509466658797371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-D7-mYs">
-                                <rect key="frame" x="186.33333333333334" y="132" width="41.333333333333314" height="22"/>
+                                <rect key="frame" x="187" y="132" width="41.333333333333343" height="22"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -531,7 +533,9 @@
                                 <rect key="frame" x="118" y="326" width="179" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="b3i-v0-fIe"/>
                                     <constraint firstAttribute="width" constant="179" id="hqp-rV-WHt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="179" id="k0I-Hh-ZDi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="15"/>
                                 <state key="normal" title="Save">
@@ -585,6 +589,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDW-wQ-dNJ">
                                 <rect key="frame" x="118" y="329" width="179" height="31"/>
                                 <color key="backgroundColor" red="0.97801184560800292" green="0.98635848443730567" blue="0.98414557459359764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="7Ke-lI-JeE"/>
+                                    <constraint firstAttribute="width" constant="179" id="pWs-md-69j"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="15"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -594,7 +602,7 @@
                                     <action selector="saveButton:" destination="uCb-Kp-iJt" eventType="touchUpInside" id="f5t-mR-OSv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-OF-bEN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-OF-bEN">
                                 <rect key="frame" x="97" y="222" width="221" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="5sG-24-1TQ"/>
@@ -642,7 +650,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gz2-Zs-A1m" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="icons8-Marker-64" selectedImage="icons8-Marker-64" id="M42-uT-rG7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0x4-Rn-pKO">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x4-Rn-pKO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -661,7 +671,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUe-AO-LXF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="icons8-Menu-64" selectedImage="icons8-Menu-64" id="231-rU-UgF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0Dn-a9-Ef6">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Dn-a9-Ef6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -681,7 +693,7 @@
         <image name="icons8-Speech Bubble-64" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nSD-4x-NzL"/>
+        <segue reference="lRz-XN-bkA"/>
         <segue reference="9yc-Q7-JMg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,8 +13,6 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     
     let store = NoteDataStore.sharedInstance
     
-    let font = UIFont(name: "Cabin-Bold", size: 12)
-    
     var selectedNote : Note!
     var gradientLayer : CAGradientLayer!
     
@@ -59,11 +57,6 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
     }
     
     // MARK : Need keyword content
-    
-    func setNoteStyling() {
-        print("i am styling")
-        self.noteContentTextView.font = font
-    }
     
     func setChartItem() {
         barChartView.noDataTextColor = UIColor.red

@@ -87,7 +87,6 @@ class NoteTableVC: UITableViewController {
             let result = dateFormatter.string(from: strDate as Date)
             cell.dateLabel?.text = String(describing: result)
             cell.contentLabel?.text = note.content!
-            // cell.setFont()
             cell.setCircle(note: note)
         }
         return cell

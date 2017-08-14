@@ -9,6 +9,8 @@
 import Foundation
 
 class DoubleConverter {
+    
+    // converts double to trimmed double with two decimal places
 
     class func willConvertDouble(as baseNumber: Double) -> Double {
         let num = baseNumber
