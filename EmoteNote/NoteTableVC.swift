@@ -78,8 +78,6 @@ class NoteTableVC: UITableViewController {
         // sets the cell separator line with the tableview
         tableView.separatorColor = UIColor.gray
         
-        //
-        
         // creates content for the tableview cell
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy" // "dd MM yyyy"

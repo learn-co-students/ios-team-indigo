@@ -110,18 +110,6 @@ class NoteContentVC: UIViewController, IAxisValueFormatter {
         let colorsArray: [UIColor] = [ColorPallet.angerColor, ColorPallet.sadnessColor, ColorPallet.joyColor, ColorPallet.fearColor, ColorPallet.disgustColor]
         chartDataSet.colors = colorsArray // anger, sadness, joy, fear, disgust
         
-        // MARK : antiquated random color generator
-        
-        //        for _ in 0..<dataPoints.count {
-        //            let red = Double(arc4random_uniform(256))
-        //            let green = Double(arc4random_uniform(256))
-        //            let blue = Double(arc4random_uniform(256))
-        //
-        //            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-        //            colorsArray.append(color)
-        //        }
-        
-        
         barChartView.data = chartData
         barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:emotionIndex)
         barChartView.xAxis.granularity = 1
